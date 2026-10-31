@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile Setup | SYNC AI</title>
+
+    <link rel="stylesheet" href="../css/profile-setup.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+
+<body>
+
+    <div class="page">
+
+        <!-- LEFT VISUAL SECTION -->
+        <section class="visual-section">
+
+            <div class="brand">
+                <div class="brand-logo">S</div>
+                <span>SYNC AI</span>
+            </div>
+
+            <div class="visual-content">
+                <span class="eyebrow">STEP 3 OF 3</span>
+
+                <h1>
+                    Build your<br>
+                    <span>student profile.</span>
+                </h1>
+
+                <p>
+                    Tell us about your skills, interests and location.
+                    This helps SYNC AI find teams that match your goals.
+                </p>
+
+                <div class="image-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85"
+                        alt="Students collaborating"
+                    >
+
+                    <div class="image-overlay">
+                        <strong>Smart Team Matching</strong>
+                        <span>Right Student. Right Team. Right Hackathon.</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- FORM SECTION -->
+        <section class="form-section">
+
+            <div class="form-container">
+
+                <div class="form-header">
+                    <span class="section-label">PROFILE SETUP</span>
+
+                    <h2>Complete your profile</h2>
+
+                    <p>
+                        Your profile helps us create better team recommendations.
+                    </p>
+                </div>
+
+
+                <form id="profileForm">
+
+                    <!-- BASIC INFORMATION -->
+                    <div class="form-section-title">
+                        <span class="number">01</span>
+
+                        <div>
+                            <h3>Basic Information</h3>
+                            <p>Your account information</p>
+                        </div>
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+                            <label for="fullName">Full Name</label>
+
+                            <input
+                                type="text"
+                                id="fullName"
+                                readonly
+                                
+                            >
+                        </div>
+
+
+                        <div class="input-group">
+                            <label for="collegeEmail">College Email</label>
+
+                            <input
+                                type="email"
+                                id="collegeEmail"
+                                readonly
+                                
+                            >
+                        </div>
+
+
+                        <div class="input-group">
+                            <label for="collegeName">
+                                College Name <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="collegeName"
+                                placeholder="Enter your college name"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="input-group">
+                            <label for="course">
+                                Course / Degree <span>*</span>
+                            </label>
+
+                            <select id="course" required>
+                                <option value="">Select course</option>
+                                <option value="B.E">B.E</option>
+                                <option value="B.Tech">B.Tech</option>
+                                <option value="B.Sc">B.Sc</option>
+                                <option value="BCA">BCA</option>
+                                <option value="M.E">M.E</option>
+                                <option value="M.Tech">M.Tech</option>
+                                <option value="M.Sc">M.Sc</option>
+                                <option value="MCA">MCA</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-group">
+                            <label for="department">
+                                Department <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                id="department"
+                                placeholder="e.g. Computer Science"
+                                required
+                            >
+                        </div>
+
+
+                        <div class="input-group">
+                            <label for="year">
+                                Year of Study <span>*</span>
+                            </label>
+
+                            <select id="year" required>
+                                <option value="">Select year</option>
+                                <option value="1st Year">1st Year</option>
+                                <option value="2nd Year">2nd Year</option>
+                                <option value="3rd Year">3rd Year</option>
+                                <option value="4th Year">4th Year</option>
+                                <option value="Postgraduate">Postgraduate</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <!-- DOMAIN -->
+                    <div class="form-section-title domain-title">
+                        <span class="number">02</span>
+
+                        <div>
+                            <h3>Preferred Domains</h3>
+                            <p>Select the areas you are interested in</p>
+                        </div>
+                    </div>
+
+
+                    <div class="domain-grid">
+
+                        <label class="domain-option">
+                            <input type="checkbox" name="domains" value="Web Development">
+                            <span>Web Development</span>
+                        </label>
+
+                        <label class="domain-option">
+                            <input type="checkbox" name="domains" value="App Development">
+                            <span>App Development</span>
+                        </label>
+
+                        <label class="domain-option">
+                            <input type="checkbox" name="domains" value="AI / Machine Learning">
+                            <span>AI / Machine Learning</span>
+                        </label>
+
+                        <label class="domain-option">
+                            <input type="checkbox" name="domains" value="Data Science">
+                            <span>Data Science</span>
+                        </label>
+
+                        <label class="domain-option">
+                            <input type="checkbox" name="domains" value="Cyber Security">
+                            <span>Cyber Security</span>
+                        </label>
+
+                        <label class="domain-option">
+                            <input type="checkbox" name="domains" value="Cloud / DevOps">
+                            <span>Cloud / DevOps</span>
+                        </label>
+
+                        <label class="domain-option">
+                            <input type="checkbox" name="domains" value="UI/UX Design">
+                            <span>UI / UX Design</span>
+                        </label>
+
+                        <label class="domain-option">
+                            <input type="checkbox" name="domains" value="Blockchain / Web3">
+                            <span>Blockchain / Web3</span>
+                        </label>
+
+                        <label class="domain-option">
+                            <input type="checkbox" name="domains" value="IoT / Embedded">
+                            <span>IoT / Embedded</span>
+                        </label>
+
+                        <label class="domain-option">
+                            <input type="checkbox" name="domains" value="Other">
+                            <span>Other</span>
+                        </label>
+
+                    </div>
+
+
+                    <!-- LOCATION -->
+                    <div class="form-section-title location-title">
+                        <span class="number">03</span>
+
+                        <div>
+                            <h3>Location</h3>
+                            <p>Used for location-based team matching</p>
+                        </div>
+                    </div>
+
+
+                    <div class="location-note">
+                        <div class="info-icon">i</div>
+
+                        <p>
+                            Your location helps you discover teams from your
+                            preferred district, state or region.
+                        </p>
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+                            <label for="region">
+                                Region <span>*</span>
+                            </label>
+
+                            <select id="region" required>
+                                <option value="">Select region</option>
+                                <option value="South India">South India</option>
+                                <option value="North India">North India</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-group">
+                            <label for="state">
+                                State <span>*</span>
+                            </label>
+
+                            <select id="state" required disabled>
+                                <option value="">Select state</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-group">
+                            <label for="district">
+                                District <span>*</span>
+                            </label>
+
+                            <select id="district" required disabled>
+                                <option value="">Select district</option>
+                            </select>
+                        </div>
+
+
+                        <div class="input-group">
+                            <label for="city">
+                                Current City
+                            </label>
+
+                            <input
+                                type="text"
+                                id="city"
+                                placeholder="e.g. Coimbatore"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- ABOUT -->
+                    <div class="form-section-title about-title">
+                        <span class="number">04</span>
+
+                        <div>
+                            <h3>About You</h3>
+                            <p>Help teammates understand you</p>
+                        </div>
+                    </div>
+
+
+                    <div class="input-group full-width">
+
+                        <label for="bio">Short Bio</label>
+
+                        <textarea
+                            id="bio"
+                            rows="4"
+                            maxlength="250"
+                            placeholder="Tell teammates about your interests, strengths and what you want to learn..."
+                        ></textarea>
+
+                        <small>
+                            Maximum 250 characters
+                        </small>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="input-group">
+                            <label for="github">GitHub Profile</label>
+
+                            <input
+                                type="url"
+                                id="github"
+                                placeholder="https://github.com/username"
+                            >
+                        </div>
+
+
+                        <div class="input-group">
+                            <label for="linkedin">LinkedIn Profile</label>
+
+                            <input
+                                type="url"
+                                id="linkedin"
+                                placeholder="https://linkedin.com/in/username"
+                            >
+                        </div>
+
+                    </div>
+
+
+                    <!-- AVAILABILITY -->
+                    <div class="form-section-title availability-title">
+                        <span class="number">05</span>
+
+                        <div>
+                            <h3>Team Availability</h3>
+                            <p>Tell us how you prefer to work</p>
+                        </div>
+                    </div>
+
+
+                    <div class="availability-options">
+
+                        <label class="availability-option">
+                            <input
+                                type="radio"
+                                name="availability"
+                                value="Available for teams"
+                                required
+                            >
+
+                            <div>
+                                <strong>Available for teams</strong>
+                                <span>I'm currently looking for teammates.</span>
+                            </div>
+                        </label>
+
+
+                        <label class="availability-option">
+                            <input
+                                type="radio"
+                                name="availability"
+                                value="Open to opportunities"
+                            >
+
+                            <div>
+                                <strong>Open to opportunities</strong>
+                                <span>I can join suitable teams when available.</span>
+                            </div>
+                        </label>
+
+                    </div>
+
+
+                    <div id="formMessage" class="form-message"></div>
+
+
+                    <button
+                        type="submit"
+                        class="continue-btn"
+                    >
+                        <span>Complete Profile</span>
+                        <span class="arrow">→</span>
+                    </button>
+
+
+                    <p class="privacy-text">
+                        Your personal contact details will remain private.
+                        Team communication will be enabled only after acceptance.
+                    </p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="../js/api.js"></script>
+    <script src="../js/profile-setup.js"></script>
+    <script src="../js/sync-3d-bg.js"></script>
+
+</body>
+</html>

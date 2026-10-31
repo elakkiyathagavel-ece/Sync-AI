@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings | SYNC AI</title>
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">S</div>
+
+            <div>
+                <h2>SYNC AI</h2>
+                <span>Smart Team Matching</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="find-hackathons.html" class="nav-item">
+                <span class="nav-icon">◈</span>
+                <span>Find Hackathons</span>
+            </a>
+
+            <a href="team-matching.html" class="nav-item">
+                <span class="nav-icon">◉</span>
+                <span>Team Matching</span>
+            </a>
+
+            <a href="my-skills.html" class="nav-item">
+                <span class="nav-icon">◆</span>
+                <span>My Skills</span>
+            </a>
+
+            <a href="growth-progress.html" class="nav-item">
+                <span class="nav-icon">↗</span>
+                <span>Growth &amp; Progress</span>
+            </a>
+
+            <a href="chat.html" class="nav-item">
+                <span class="nav-icon">◌</span>
+                <span>Chat</span>
+            </a>
+
+            <a href="my-teams.html" class="nav-item">
+                <span class="nav-icon">◇</span>
+                <span>My Teams</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <span class="nav-icon">○</span>
+                <span>Profile</span>
+            </a>
+
+            <a href="ai-recommendations.html" class="nav-item">
+                <span class="nav-icon">✦</span>
+                <span>AI Recommendations</span>
+            </a>
+
+            <a href="notifications.html" class="nav-item">
+                <span class="nav-icon">♢</span>
+                <span>Notifications</span>
+            </a>
+
+            <a href="settings.html" class="nav-item active">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="sidebar-tip">
+
+                <div class="tip-icon">✦</div>
+
+                <div>
+                    <strong>SYNC AI</strong>
+                    <p>
+                        Manage your preferences and account settings.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+                <p class="breadcrumb">
+                    Dashboard / Settings
+                </p>
+
+                <h1>Settings</h1>
+
+                <p class="page-subtitle">
+                    Manage your account, preferences and privacy.
+                </p>
+            </div>
+
+            <div class="top-profile">
+
+                <div class="profile-mini">
+
+                    <div class="profile-avatar" id="profileAvatar">
+                        K
+                    </div>
+
+                    <div>
+                        <strong id="profileName">
+                            Student
+                        </strong>
+
+                        <span>Student</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- SETTINGS LAYOUT -->
+        <div class="settings-layout">
+
+            <!-- SETTINGS MENU -->
+            <aside class="settings-menu">
+
+                <button
+                    class="settings-menu-item active"
+                    data-section="account">
+
+                    <span>○</span>
+
+                    <div>
+                        <strong>Account</strong>
+                        <small>Account information</small>
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="settings-menu-item"
+                    data-section="notifications">
+
+                    <span>♢</span>
+
+                    <div>
+                        <strong>Notifications</strong>
+                        <small>Manage alerts</small>
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="settings-menu-item"
+                    data-section="privacy">
+
+                    <span>◆</span>
+
+                    <div>
+                        <strong>Privacy</strong>
+                        <small>Control your visibility</small>
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="settings-menu-item"
+                    data-section="matching">
+
+                    <span>◉</span>
+
+                    <div>
+                        <strong>Team Matching</strong>
+                        <small>Matching preferences</small>
+                    </div>
+
+                </button>
+
+
+                <button
+                    class="settings-menu-item"
+                    data-section="appearance">
+
+                    <span>✦</span>
+
+                    <div>
+                        <strong>Appearance</strong>
+                        <small>Interface preferences</small>
+                    </div>
+
+                </button>
+
+            </aside>
+
+
+            <!-- SETTINGS CONTENT -->
+            <section class="settings-content">
+
+
+                <!-- ACCOUNT -->
+                <div
+                    class="settings-panel active"
+                    id="account">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <span class="panel-label">
+                                ACCOUNT
+                            </span>
+
+                            <h2>Account Information</h2>
+
+                            <p>
+                                View your registered account details.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="account-card">
+
+                        <div class="large-avatar" id="largeAvatar">
+                            K
+                        </div>
+
+                        <div class="account-main">
+
+                            <h3 id="accountName">
+                                Student
+                            </h3>
+
+                            <p id="accountEmail">
+                                student@example.com
+                            </p>
+
+                            <span class="verified-status">
+                                ✓ College Email Verified
+                            </span>
+
+                        </div>
+
+                        <a
+                            href="profile.html"
+                            class="profile-btn">
+                            View Profile
+                        </a>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input
+                                type="text"
+                                id="fullName"
+                                readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label>College Email</label>
+                            <input
+                                type="email"
+                                id="collegeEmail"
+                                readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label>College</label>
+                            <input
+                                type="text"
+                                id="collegeName"
+                                readonly>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Department</label>
+                            <input
+                                type="text"
+                                id="department"
+                                readonly>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NOTIFICATIONS -->
+                <div
+                    class="settings-panel"
+                    id="notifications">
+
+                    <div class="panel-header">
+
+                        <span class="panel-label">
+                            NOTIFICATIONS
+                        </span>
+
+                        <h2>Notification Preferences</h2>
+
+                        <p>
+                            Choose which updates you want to receive.
+                        </p>
+
+                    </div>
+
+
+                    <div class="setting-card">
+
+                        <div>
+                            <strong>Team Match Alerts</strong>
+
+                            <p>
+                                Get notified when SYNC AI finds
+                                compatible teams.
+                            </p>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="teamAlerts"
+                                checked>
+
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-card">
+
+                        <div>
+                            <strong>Hackathon Updates</strong>
+
+                            <p>
+                                Receive new hackathon and deadline updates.
+                            </p>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="hackathonAlerts"
+                                checked>
+
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-card">
+
+                        <div>
+                            <strong>Growth Updates</strong>
+
+                            <p>
+                                Get updates about your skills and progress.
+                            </p>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="growthAlerts"
+                                checked>
+
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-card">
+
+                        <div>
+                            <strong>Team Activity</strong>
+
+                            <p>
+                                Receive updates about your team activities.
+                            </p>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="teamActivityAlerts"
+                                checked>
+
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRIVACY -->
+                <div
+                    class="settings-panel"
+                    id="privacy">
+
+                    <div class="panel-header">
+
+                        <span class="panel-label">
+                            PRIVACY
+                        </span>
+
+                        <h2>Privacy Settings</h2>
+
+                        <p>
+                            Control what information other students can see.
+                        </p>
+
+                    </div>
+
+
+                    <div class="privacy-banner">
+
+                        <div class="privacy-icon">
+                            ✓
+                        </div>
+
+                        <div>
+                            <strong>
+                                Your personal contact details are protected.
+                            </strong>
+
+                            <p>
+                                Your personal email and mobile number
+                                are not displayed publicly to other students.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="setting-card">
+
+                        <div>
+                            <strong>Show Growth Score</strong>
+
+                            <p>
+                                Allow teammates to see your Growth Score.
+                            </p>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="showGrowthScore"
+                                checked>
+
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-card">
+
+                        <div>
+                            <strong>Show Learning Streak</strong>
+
+                            <p>
+                                Display your learning streak on your profile.
+                            </p>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="showLearningStreak"
+                                checked>
+
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-card">
+
+                        <div>
+                            <strong>Profile Discoverability</strong>
+
+                            <p>
+                                Allow other students to discover your profile
+                                for team matching.
+                            </p>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="profileDiscoverability"
+                                checked>
+
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-card">
+
+                        <div>
+                            <strong>Show Verified Skill Score</strong>
+
+                            <p>
+                                Keep your Verified Skill Score private.
+                            </p>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="showSkillScore">
+
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <!-- TEAM MATCHING -->
+                <div
+                    class="settings-panel"
+                    id="matching">
+
+                    <div class="panel-header">
+
+                        <span class="panel-label">
+                            TEAM MATCHING
+                        </span>
+
+                        <h2>Matching Preferences</h2>
+
+                        <p>
+                            Manage how SYNC AI recommends teams for you.
+                        </p>
+
+                    </div>
+
+
+                    <div class="setting-card vertical-card">
+
+                        <div>
+                            <strong>Use Preferred Location</strong>
+
+                            <p>
+                                Use your selected region, state and district
+                                while finding compatible teams.
+                            </p>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="locationMatching"
+                                checked>
+
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="setting-card vertical-card">
+
+                        <div>
+                            <strong>Use Preferred Domains</strong>
+
+                            <p>
+                                Recommend teams based on your selected
+                                technical domains.
+                            </p>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="domainMatching"
+                                checked>
+
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="preference-info">
+
+                        <span>YOUR CURRENT MATCHING PROFILE</span>
+
+                        <div class="preference-row">
+
+                            <strong>Region</strong>
+                            <span id="userRegion">Not selected</span>
+
+                        </div>
+
+                        <div class="preference-row">
+
+                            <strong>State</strong>
+                            <span id="userState">Not selected</span>
+
+                        </div>
+
+                        <div class="preference-row">
+
+                            <strong>District</strong>
+                            <span id="userDistrict">Not selected</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- APPEARANCE -->
+                <div
+                    class="settings-panel"
+                    id="appearance">
+
+                    <div class="panel-header">
+
+                        <span class="panel-label">
+                            APPEARANCE
+                        </span>
+
+                        <h2>Appearance</h2>
+
+                        <p>
+                            Manage your interface preferences.
+                        </p>
+
+                    </div>
+
+
+                    <div class="setting-card">
+
+                        <div>
+                            <strong>Compact Notifications</strong>
+
+                            <p>
+                                Use a more compact layout for notification cards.
+                            </p>
+                        </div>
+
+                        <label class="switch">
+                            <input
+                                type="checkbox"
+                                id="compactNotifications">
+
+                            <span class="slider"></span>
+                        </label>
+
+                    </div>
+
+
+                    <div class="appearance-preview">
+
+                        <div class="preview-header">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                        <div class="preview-body">
+
+                            <div class="preview-sidebar"></div>
+
+                            <div class="preview-content">
+
+                                <div class="preview-line large"></div>
+                                <div class="preview-line"></div>
+
+                                <div class="preview-cards">
+
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SAVE -->
+                <div class="save-area">
+
+                    <span id="saveMessage">
+                        Changes are saved automatically.
+                    </span>
+
+                    <button id="saveSettings">
+                        Save Changes
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/settings.js"></script>
+<script src="../js/sync-3d-bg.js"></script>
+
+</body>
+</html>

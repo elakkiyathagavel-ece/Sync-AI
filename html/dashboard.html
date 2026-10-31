@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | SYNC AI</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+
+<body>
+
+<div class="dashboard-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-circle">S</div>
+            <div class="logo-text">SYNC AI</div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="active">
+                <span class="nav-icon">⌂</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+
+            <a href="find-hackathons.html">
+                <span class="nav-icon">◈</span>
+                <span class="nav-text">Find Hackathons</span>
+            </a>
+
+            <a href="team-matching.html">
+                <span class="nav-icon">◎</span>
+                <span class="nav-text">Team Matching</span>
+            </a>
+
+            <a href="my-skills.html">
+                <span class="nav-icon">▣</span>
+                <span class="nav-text">My Skills</span>
+            </a>
+
+            <a href="growth-progress.html">
+                <span class="nav-icon">↗</span>
+                <span class="nav-text">Growth &amp; Progress</span>
+            </a>
+
+            <a href="chat.html">
+                <span class="nav-icon">▱</span>
+                <span class="nav-text">Chat</span>
+            </a>
+
+            <a href="my-teams.html">
+                <span class="nav-icon">♧</span>
+                <span class="nav-text">My Teams</span>
+            </a>
+
+            <a href="profile.html">
+                <span class="nav-icon">○</span>
+                <span class="nav-text">Profile</span>
+            </a>
+
+            <a href="ai-recommendations.html">
+                <span class="nav-icon">✦</span>
+                <span class="nav-text">AI Recommendations</span>
+            </a>
+
+            <a href="notifications.html">
+                <span class="nav-icon">♢</span>
+                <span class="nav-text">Notifications</span>
+            </a>
+
+            <a href="settings.html">
+                <span class="nav-icon">⚙</span>
+                <span class="nav-text">Settings</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1 class="page-title">Dashboard</h1>
+                <p class="page-subtitle">
+                    Track your progress, discover hackathons and find the right team.
+                </p>
+            </div>
+
+            <div class="topbar-right">
+
+                <button
+                    class="notification-btn"
+                    id="notificationBtn"
+                    title="Notifications">
+                    ♢
+                </button>
+
+                <div class="user-mini" id="profileBtn">
+
+                    <div
+                        class="user-mini-avatar"
+                        id="topAvatar">
+                        K
+                    </div>
+
+                    <div class="user-mini-info">
+                        <span
+                            class="user-mini-name"
+                            id="topUserName">
+                            Student
+                        </span>
+
+                        <span class="user-mini-role">
+                            Student
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= WELCOME HERO ================= -->
+
+        <section class="welcome-card">
+
+            <img
+                class="welcome-image"
+                src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85"
+                alt="Students collaborating">
+
+            <div class="welcome-content">
+
+                <h2>
+                    Welcome back, <span id="welcomeName">Student</span>!
+                </h2>
+
+                <p>
+                    Your journey to the right hackathon team starts here.
+                    Explore opportunities, improve your skills and connect
+                    with compatible teammates.
+                </p>
+
+                <a
+                    href="team-matching.html"
+                    class="welcome-btn">
+                    Find My Team
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= STAT CARDS ================= -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span class="stat-title">
+                        Verified Skill Score
+                    </span>
+
+                    <span class="stat-icon">
+                        ✓
+                    </span>
+                </div>
+
+                <div
+                    class="stat-value"
+                    id="verifiedSkillScore">
+                    0
+                </div>
+
+                <div class="stat-description">
+                    Based on your assessment
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span class="stat-title">
+                        Growth Score
+                    </span>
+
+                    <span class="stat-icon">
+                        ↗
+                    </span>
+                </div>
+
+                <div
+                    class="stat-value"
+                    id="growthScore">
+                    0
+                </div>
+
+                <div class="stat-description">
+                    Your continuous improvement
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span class="stat-title">
+                        Learning Streak
+                    </span>
+
+                    <span class="stat-icon">
+                        ★
+                    </span>
+                </div>
+
+                <div
+                    class="stat-value"
+                    id="learningStreak">
+                    0
+                </div>
+
+                <div class="stat-description">
+                    Days of consistent learning
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-top">
+                    <span class="stat-title">
+                        XP Points
+                    </span>
+
+                    <span class="stat-icon">
+                        +
+                    </span>
+                </div>
+
+                <div
+                    class="stat-value"
+                    id="xpPoints">
+                    0
+                </div>
+
+                <div class="stat-description">
+                    Earned through activities
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FIRST CONTENT ROW ================= -->
+
+        <section class="dashboard-grid">
+
+            <!-- PROFILE -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <h3>Student Profile</h3>
+
+                    <a href="profile.html">
+                        View Profile
+                    </a>
+
+                </div>
+
+
+                <div class="profile-card">
+
+                    <div
+                        class="profile-avatar"
+                        id="profileAvatar">
+                        K
+                    </div>
+
+
+                    <div class="profile-info">
+
+                        <h3 id="profileName">
+                            Student
+                        </h3>
+
+                        <p id="profileCollege">
+                            College
+                        </p>
+
+                        <p id="profileLocation">
+                            Location
+                        </p>
+
+                        <span
+                            class="profile-domain"
+                            id="profileDomain">
+                            Web Development
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI MATCHING -->
+
+            <div class="dashboard-card ai-card">
+
+                <div class="card-header">
+
+                    <h3>
+                        AI Team Matching
+                    </h3>
+
+                </div>
+
+
+                <p class="ai-card-text">
+                    Our AI analyzes your verified skills, interests,
+                    location and team requirements to recommend
+                    suitable teams.
+                </p>
+
+
+                <div class="match-score">
+
+                    <div class="match-score-circle">
+                        94%
+                    </div>
+
+                    <div class="match-info">
+
+                        <strong>
+                            Best Team Match
+                        </strong>
+
+                        <span>
+                            CodeCrafters
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="ai-recommendations.html"
+                    class="ai-btn">
+                    View Recommendations
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= HACKATHONS ================= -->
+
+        <section class="dashboard-card">
+
+            <div class="card-header">
+
+                <h3>
+                    Upcoming Hackathons
+                </h3>
+
+                <a href="find-hackathons.html">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div class="hackathon-list">
+
+
+                <!-- HACKATHON 1 -->
+
+                <article class="hackathon-card">
+
+                    <img
+                        class="hackathon-image"
+                        src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=85"
+                        alt="Technology event">
+
+                    <div class="hackathon-content">
+
+                        <h4>
+                            Tech Innovation Challenge
+                        </h4>
+
+                        <p>
+                            AI • Web Development
+                        </p>
+
+                        <div class="hackathon-meta">
+
+                            <span class="hackathon-mode">
+                                Online
+                            </span>
+
+                            <span class="hackathon-date">
+                                Soon
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- HACKATHON 2 -->
+
+                <article class="hackathon-card">
+
+                    <img
+                        class="hackathon-image"
+                        src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=500&q=85"
+                        alt="Students working">
+
+                    <div class="hackathon-content">
+
+                        <h4>
+                            Student Innovation Hack
+                        </h4>
+
+                        <p>
+                            Software • Innovation
+                        </p>
+
+                        <div class="hackathon-meta">
+
+                            <span class="hackathon-mode">
+                                Hybrid
+                            </span>
+
+                            <span class="hackathon-date">
+                                Soon
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- HACKATHON 3 -->
+
+                <article class="hackathon-card">
+
+                    <img
+                        class="hackathon-image"
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=500&q=85"
+                        alt="Team discussion">
+
+                    <div class="hackathon-content">
+
+                        <h4>
+                            Future Builders Hackathon
+                        </h4>
+
+                        <p>
+                            Cloud • AI • Data
+                        </p>
+
+                        <div class="hackathon-meta">
+
+                            <span class="hackathon-mode">
+                                Offline
+                            </span>
+
+                            <span class="hackathon-date">
+                                Soon
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= LOWER CONTENT ================= -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- RECENT ACTIVITY -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <h3>
+                        Recent Activity
+                    </h3>
+
+                </div>
+
+
+                <div class="activity-list">
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            ✓
+                        </div>
+
+                        <div class="activity-content">
+
+                            <strong>
+                                Skill assessment completed
+                            </strong>
+
+                            <span>
+                                Your verified skill profile has been updated.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            ✦
+                        </div>
+
+                        <div class="activity-content">
+
+                            <strong>
+                                New AI team recommendations
+                            </strong>
+
+                            <span>
+                                Compatible teams are waiting for you.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            +
+                        </div>
+
+                        <div class="activity-content">
+
+                            <strong>
+                                Learning progress updated
+                            </strong>
+
+                            <span>
+                                Keep your learning streak active.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- WEEKLY PROGRESS -->
+
+            <div class="dashboard-card">
+
+                <div class="card-header">
+
+                    <h3>
+                        Weekly Learning Progress
+                    </h3>
+
+                    <a href="growth-progress.html">
+                        Details
+                    </a>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <div class="progress-label">
+
+                        <span>
+                            Coding
+                        </span>
+
+                        <span>
+                            78%
+                        </span>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            style="width: 78%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <div class="progress-label">
+
+                        <span>
+                            Problem Solving
+                        </span>
+
+                        <span>
+                            72%
+                        </span>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            style="width: 72%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <div class="progress-label">
+
+                        <span>
+                            Communication
+                        </span>
+
+                        <span>
+                            80%
+                        </span>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            style="width: 80%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="progress-item">
+
+                    <div class="progress-label">
+
+                        <span>
+                            Teamwork
+                        </span>
+
+                        <span>
+                            85%
+                        </span>
+
+                    </div>
+
+                    <div class="progress-bar">
+
+                        <div
+                            class="progress-fill"
+                            style="width: 85%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="dashboard-footer">
+
+            © <span id="footerYear"></span>
+            SYNC AI. All rights reserved.
+
+        </footer>
+
+    </main>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/dashboard.js"></script>
+<script src="../js/sync-3d-bg.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - SYNC AI</title>
+    <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+
+<body>
+
+<div class="app-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+            <div class="logo-circle">S</div>
+
+            <div>
+                <h2>SYNC AI</h2>
+                <span>Smart Team Matching</span>
+            </div>
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="find-hackathons.html" class="nav-item">
+                <span class="nav-icon">⌕</span>
+                <span>Find Hackathons</span>
+            </a>
+
+            <a href="team-matching.html" class="nav-item">
+                <span class="nav-icon">◈</span>
+                <span>Team Matching</span>
+            </a>
+
+            <a href="my-skills.html" class="nav-item">
+                <span class="nav-icon">◇</span>
+                <span>My Skills</span>
+            </a>
+
+            <a href="growth-progress.html" class="nav-item">
+                <span class="nav-icon">↗</span>
+                <span>Growth & Progress</span>
+            </a>
+
+            <a href="chat.html" class="nav-item">
+                <span class="nav-icon">▢</span>
+                <span>Chat</span>
+            </a>
+
+            <a href="my-teams.html" class="nav-item">
+                <span class="nav-icon">♧</span>
+                <span>My Teams</span>
+            </a>
+
+            <a href="profile.html" class="nav-item active">
+                <span class="nav-icon">○</span>
+                <span>Profile</span>
+            </a>
+
+            <a href="ai-recommendations.html" class="nav-item">
+                <span class="nav-icon">✦</span>
+                <span>AI Recommendations</span>
+            </a>
+
+            <a href="notifications.html" class="nav-item">
+                <span class="nav-icon">♢</span>
+                <span>Notifications</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="user-mini">
+
+                <div class="mini-avatar" id="sidebarAvatar">
+                    K
+                </div>
+
+                <div>
+                    <strong id="sidebarName">Student</strong>
+                    <span>Student</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div>
+                <p class="page-label">MY ACCOUNT</p>
+
+                <h1>My Profile</h1>
+
+                <p class="page-subtitle">
+                    Manage your student profile and team matching information.
+                </p>
+            </div>
+
+            <button class="edit-btn" id="editProfileBtn">
+                Edit Profile
+            </button>
+
+        </header>
+
+
+
+        <!-- ================= PROFILE HERO ================= -->
+
+        <section class="profile-hero">
+
+            <div class="profile-main">
+
+                <div class="profile-avatar" id="profileAvatar">
+                    K
+                </div>
+
+                <div class="profile-identity">
+
+                    <div class="verified-name">
+                        <h2 id="profileName">
+                            Student
+                        </h2>
+
+                        <span class="verified-badge">
+                            ✓ Verified
+                        </span>
+                    </div>
+
+                    <p id="profileCollege">
+                        College Name
+                    </p>
+
+                    <span class="profile-email" id="profileEmail">
+                        college@email.edu
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-location">
+
+                <span class="location-label">
+                    Current Location
+                </span>
+
+                <strong id="profileDistrict">
+                    Coimbatore
+                </strong>
+
+                <span id="profileState">
+                    Tamil Nadu
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SCORE CARDS ================= -->
+
+        <section class="score-grid">
+
+            <div class="score-card">
+
+                <div class="score-icon blue">
+                    ✓
+                </div>
+
+                <div>
+                    <span>Verified Skill Score</span>
+                    <strong id="skillScore">0</strong>
+                    <small>/ 100</small>
+                </div>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <div class="score-icon purple">
+                    ↗
+                </div>
+
+                <div>
+                    <span>Growth Score</span>
+                    <strong id="growthScore">0</strong>
+                    <small>/ 100</small>
+                </div>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <div class="score-icon violet">
+                    ★
+                </div>
+
+                <div>
+                    <span>Learning Streak</span>
+                    <strong id="learningStreak">0</strong>
+                    <small>days</small>
+                </div>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <div class="score-icon blue">
+                    XP
+                </div>
+
+                <div>
+                    <span>XP Points</span>
+                    <strong id="xpPoints">0</strong>
+                    <small>XP</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PROFILE INFORMATION ================= -->
+
+        <section class="content-card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Personal & Academic Information</h2>
+
+                    <p>
+                        Your basic information used for profile and team matching.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-item">
+                    <span>Full Name</span>
+                    <strong id="infoName">-</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>College</span>
+                    <strong id="infoCollege">-</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Course / Degree</span>
+                    <strong id="infoDegree">-</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Department</span>
+                    <strong id="infoDepartment">-</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>Year</span>
+                    <strong id="infoYear">-</strong>
+                </div>
+
+                <div class="info-item">
+                    <span>College Email</span>
+                    <strong id="infoEmail">-</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= LOCATION ================= -->
+
+        <section class="content-card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Team Matching Location</h2>
+
+                    <p>
+                        Your location helps SYNC AI find relevant teams.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="location-grid">
+
+                <div class="location-box">
+
+                    <span>Region</span>
+
+                    <strong id="infoRegion">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="location-box">
+
+                    <span>State</span>
+
+                    <strong id="infoState">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="location-box">
+
+                    <span>District</span>
+
+                    <strong id="infoDistrict">
+                        -
+                    </strong>
+
+                </div>
+
+
+                <div class="location-box">
+
+                    <span>City / Location</span>
+
+                    <strong id="infoCity">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= DOMAINS ================= -->
+
+        <section class="content-card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Preferred Domains</h2>
+
+                    <p>
+                        Domains you are interested in for hackathons and teams.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="domain-list" id="domainList">
+
+                <!-- JavaScript loads domains -->
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= SKILLS + BADGES ================= -->
+
+        <section class="two-column">
+
+            <div class="content-card">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Technical Skills</h2>
+
+                        <p>
+                            Skills added to your student profile.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-list" id="skillList">
+
+                    <!-- JavaScript loads skills -->
+
+                </div>
+
+            </div>
+
+
+
+            <div class="content-card">
+
+                <div class="section-heading">
+
+                    <div>
+                        <h2>Achievements</h2>
+
+                        <p>
+                            Your learning and improvement badges.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="badge-list">
+
+                    <div class="achievement-badge">
+                        <div class="badge-icon">★</div>
+
+                        <div>
+                            <strong>Rising Star</strong>
+                            <span>Keep improving</span>
+                        </div>
+                    </div>
+
+
+                    <div class="achievement-badge">
+                        <div class="badge-icon">↗</div>
+
+                        <div>
+                            <strong>Fast Learner</strong>
+                            <span>Quick improvement</span>
+                        </div>
+                    </div>
+
+
+                    <div class="achievement-badge">
+                        <div class="badge-icon">✓</div>
+
+                        <div>
+                            <strong>Consistent Learner</strong>
+                            <span>Regular activity</span>
+                        </div>
+                    </div>
+
+
+                    <div class="achievement-badge">
+                        <div class="badge-icon">◆</div>
+
+                        <div>
+                            <strong>Problem Solver</strong>
+                            <span>Problem-solving skills</span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PRIVACY ================= -->
+
+        <section class="privacy-card">
+
+            <div class="privacy-icon">
+                ✓
+            </div>
+
+            <div>
+
+                <h3>Profile Privacy</h3>
+
+                <p>
+                    Your personal email and private assessment scores are
+                    protected. Team matching uses your selected domains,
+                    location and relevant compatibility information.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/profile.js"></script>
+<script src="../js/sync-3d-bg.js"></script>
+
+</body>
+</html>

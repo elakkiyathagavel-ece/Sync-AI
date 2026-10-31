@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat | SYNC AI</title>
+
+    <link rel="stylesheet" href="../css/chat.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+
+<body>
+
+<div class="app-container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo-area">
+            <div class="logo-circle">S</div>
+
+            <div>
+                <h2>SYNC AI</h2>
+                <span>Student Hub</span>
+            </div>
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="find-hackathons.html" class="nav-item">
+                <span class="nav-icon">◈</span>
+                <span>Find Hackathons</span>
+            </a>
+
+            <a href="team-matching.html" class="nav-item">
+                <span class="nav-icon">◉</span>
+                <span>Team Matching</span>
+            </a>
+
+            <a href="my-skills.html" class="nav-item">
+                <span class="nav-icon">◇</span>
+                <span>My Skills</span>
+            </a>
+
+            <a href="growth-progress.html" class="nav-item">
+                <span class="nav-icon">↗</span>
+                <span>Growth & Progress</span>
+            </a>
+
+            <a href="chat.html" class="nav-item active">
+                <span class="nav-icon">▱</span>
+                <span>Chat</span>
+            </a>
+
+            <a href="my-teams.html" class="nav-item">
+                <span class="nav-icon">◎</span>
+                <span>My Teams</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <span class="nav-icon">♙</span>
+                <span>Profile</span>
+            </a>
+            
+            <a href="ai-recommendations.html" class="nav-item">
+                <span class="nav-icon">✦</span>
+                <span>AI Recommendations</span>
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+
+            <div class="sidebar-profile">
+
+                <div class="profile-avatar" id="sidebarAvatar">
+                    K
+                </div>
+
+                <div class="profile-info">
+                    <strong id="sidebarName">Student</strong>
+                    <span>Student</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <header class="top-header">
+
+            <div>
+                <p class="welcome-text">Connect with your teammates</p>
+
+                <h1>Chat</h1>
+
+                <p class="page-description">
+                    Communicate securely with your hackathon teammates.
+                </p>
+            </div>
+
+
+            <div class="header-profile">
+                <div class="header-avatar" id="headerAvatar">
+                    K
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- ================= CHAT AREA ================= -->
+
+        <section class="chat-container">
+
+
+            <!-- CONTACTS -->
+
+            <aside class="chat-sidebar">
+
+                <div class="chat-sidebar-header">
+
+                    <div>
+                        <h2>Messages</h2>
+                        <span id="conversationCount">
+                            3 conversations
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search teammates..."
+                    >
+
+                </div>
+
+
+                <div class="conversation-list" id="conversationList">
+
+                    <!-- Conversations inserted by JS -->
+
+                </div>
+
+            </aside>
+
+
+            <!-- CHAT WINDOW -->
+
+            <section class="chat-window">
+
+
+                <!-- Chat Header -->
+
+                <div class="chat-header">
+
+                    <div class="chat-user">
+
+                        <div
+                            class="chat-avatar"
+                            id="chatAvatar"
+                        >
+                            A
+                        </div>
+
+
+                        <div>
+
+                            <h2 id="chatUserName">
+                                Arun Kumar
+                            </h2>
+
+                            <span id="chatUserStatus">
+                                Team Member
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chat-actions">
+
+                        <button
+                            class="chat-action-btn"
+                            title="Team information"
+                            id="teamInfoBtn"
+                        >
+                            ⓘ
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Messages -->
+
+                <div
+                    class="messages-area"
+                    id="messagesArea"
+                >
+
+                    <!-- Messages inserted by JS -->
+
+                </div>
+
+
+                <!-- Message Input -->
+
+                <div class="message-input-area">
+
+                    <div class="message-input-wrapper">
+
+                        <input
+                            type="text"
+                            id="messageInput"
+                            placeholder="Type your message..."
+                            autocomplete="off"
+                        >
+
+                        <button
+                            id="sendButton"
+                            class="send-button"
+                        >
+                            Send
+                        </button>
+
+                    </div>
+
+                    <p class="chat-note">
+                        Messages are stored locally in this prototype.
+                    </p>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/chat.js"></script>
+<script src="../js/sync-3d-bg.js"></script>
+
+</body>
+</html>

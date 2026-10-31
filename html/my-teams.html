@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Teams - SYNC AI</title>
+    <link rel="stylesheet" href="../css/my-teams.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo-area">
+            <div class="logo-circle">S</div>
+            <div>
+                <h2>SYNC AI</h2>
+                <span>Smart Team Matching</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="find-hackathons.html" class="nav-item">
+                <span class="nav-icon">⌕</span>
+                <span>Find Hackathons</span>
+            </a>
+
+            <a href="team-matching.html" class="nav-item">
+                <span class="nav-icon">◈</span>
+                <span>Team Matching</span>
+            </a>
+
+            <a href="my-skills.html" class="nav-item">
+                <span class="nav-icon">◇</span>
+                <span>My Skills</span>
+            </a>
+
+            <a href="growth-progress.html" class="nav-item">
+                <span class="nav-icon">↗</span>
+                <span>Growth & Progress</span>
+            </a>
+
+            <a href="chat.html" class="nav-item">
+                <span class="nav-icon">▢</span>
+                <span>Chat</span>
+            </a>
+
+            <a href="my-teams.html" class="nav-item active">
+                <span class="nav-icon">♧</span>
+                <span>My Teams</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <span class="nav-icon">○</span>
+                <span>Profile</span>
+            </a>
+
+            <a href="ai-recommendations.html" class="nav-item">
+                <span class="nav-icon">✦</span>
+                <span>AI Recommendations</span>
+            </a>
+
+            <a href="notifications.html" class="nav-item">
+                <span class="nav-icon">♢</span>
+                <span>Notifications</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="user-mini">
+                <div class="mini-avatar" id="sidebarAvatar">K</div>
+                <div>
+                    <strong id="sidebarName">Student</strong>
+                    <span>Student</span>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- TOP -->
+        <header class="top-header">
+            <div>
+                <p class="page-label">TEAM MANAGEMENT</p>
+                <h1>My Teams</h1>
+                <p class="page-subtitle">
+                    Manage your teams, members and hackathon participation.
+                </p>
+            </div>
+
+            <button class="create-team-btn" id="createTeamBtn">
+                + Create Team
+            </button>
+        </header>
+
+
+        <!-- TEAM STATUS -->
+        <section class="team-status-card">
+
+            <div class="status-left">
+                <div class="team-icon">♧</div>
+
+                <div>
+                    <span class="status-badge">ACTIVE TEAM</span>
+                    <h2 id="teamName">CodeCrafters</h2>
+                    <p id="teamDescription">
+                        A collaborative team focused on building innovative web solutions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="team-score">
+                <span>Compatibility</span>
+                <strong id="compatibilityScore">94%</strong>
+            </div>
+
+        </section>
+
+
+        <!-- TEAM DETAILS -->
+        <section class="details-grid">
+
+            <div class="info-card">
+                <span class="card-label">Hackathon</span>
+                <h3 id="hackathonName">HackACE 2026</h3>
+                <p id="hackathonMode">Hybrid • Open Innovation</p>
+            </div>
+
+            <div class="info-card">
+                <span class="card-label">Location</span>
+                <h3 id="teamLocation">Coimbatore</h3>
+                <p id="teamRegion">Tamil Nadu • South India</p>
+            </div>
+
+            <div class="info-card">
+                <span class="card-label">Domain</span>
+                <h3 id="teamDomain">Web Development</h3>
+                <p>Frontend • Backend • UI/UX</p>
+            </div>
+
+            <div class="info-card">
+                <span class="card-label">Team Size</span>
+                <h3><span id="memberCount">3</span> / <span id="maxMembers">5</span></h3>
+                <p id="vacancyText">2 positions available</p>
+            </div>
+
+        </section>
+
+
+        <!-- MEMBERS -->
+        <section class="content-card">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Team Members</h2>
+                    <p>People currently working in your team.</p>
+                </div>
+
+                <button class="invite-btn" id="inviteBtn">
+                    + Invite Member
+                </button>
+            </div>
+
+            <div class="members-list" id="membersList">
+                <!-- JS loads members -->
+            </div>
+
+        </section>
+
+
+        <!-- PROGRESS + ACTIVITY -->
+        <section class="bottom-grid">
+
+            <div class="content-card">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Team Progress</h2>
+                        <p>Track your team's preparation.</p>
+                    </div>
+
+                    <strong class="progress-percent">65%</strong>
+                </div>
+
+                <div class="progress-bar">
+                    <div class="progress-fill" style="width: 65%;"></div>
+                </div>
+
+                <div class="progress-items">
+
+                    <div class="progress-item completed">
+                        <span>✓</span>
+                        <div>
+                            <strong>Team Formation</strong>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+
+                    <div class="progress-item completed">
+                        <span>✓</span>
+                        <div>
+                            <strong>Idea Discussion</strong>
+                            <p>Completed</p>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <span>3</span>
+                        <div>
+                            <strong>Prototype Development</strong>
+                            <p>In progress</p>
+                        </div>
+                    </div>
+
+                    <div class="progress-item">
+                        <span>4</span>
+                        <div>
+                            <strong>Final Submission</strong>
+                            <p>Pending</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-card">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Team Activity</h2>
+                        <p>Recent team updates.</p>
+                    </div>
+                </div>
+
+                <div class="activity-list">
+
+                    <div class="activity">
+                        <div class="activity-dot"></div>
+                        <div>
+                            <strong>Team joined successfully</strong>
+                            <p>Today</p>
+                        </div>
+                    </div>
+
+                    <div class="activity">
+                        <div class="activity-dot"></div>
+                        <div>
+                            <strong>Team discussion started</strong>
+                            <p>Yesterday</p>
+                        </div>
+                    </div>
+
+                    <div class="activity">
+                        <div class="activity-dot"></div>
+                        <div>
+                            <strong>Hackathon selected</strong>
+                            <p>2 days ago</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ACTIONS -->
+        <section class="actions-card">
+
+            <div>
+                <h2>Team Actions</h2>
+                <p>Manage your current team participation.</p>
+            </div>
+
+            <div class="action-buttons">
+                <button class="secondary-btn" id="teamInfoBtn">
+                    Team Information
+                </button>
+
+                <button class="danger-btn" id="leaveTeamBtn">
+                    Leave Team
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/my-teams.js"></script>
+<script src="../js/sync-3d-bg.js"></script>
+
+</body>
+</html>

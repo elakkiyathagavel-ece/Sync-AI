@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Team Matching - SYNC AI</title>
+
+    <link rel="stylesheet" href="../css/team-matching.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-logo">S</div>
+                <div>
+                    <h2>SYNC AI</h2>
+                    <p>Smart Team Matching</p>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+
+                <a href="dashboard.html" class="nav-item">
+                    <span class="nav-icon">⌂</span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="find-hackathons.html" class="nav-item">
+                    <span class="nav-icon">◈</span>
+                    <span>Find Hackathons</span>
+                </a>
+
+                <a href="team-matching.html" class="nav-item active">
+                    <span class="nav-icon">◎</span>
+                    <span>Team Matching</span>
+                </a>
+
+                <a href="my-skills.html" class="nav-item">
+                    <span class="nav-icon">◇</span>
+                    <span>My Skills</span>
+                </a>
+
+                <a href="growth-progress.html" class="nav-item">
+                    <span class="nav-icon">↗</span>
+                    <span>Growth & Progress</span>
+                </a>
+
+                <a href="chat.html" class="nav-item">
+                    <span class="nav-icon">◌</span>
+                    <span>Chat</span>
+                </a>
+
+                <a href="my-teams.html" class="nav-item">
+                    <span class="nav-icon">♢</span>
+                    <span>My Teams</span>
+                </a>
+
+                <a href="profile.html" class="nav-item">
+                <span class="nav-icon">♙</span>
+                <span>Profile</span>
+            </a>
+
+                <a href="ai-recommendations.html" class="nav-item">
+                    <span class="nav-icon">☆</span>
+                    <span>AI Recommendations</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">♧</span>
+                    <span>Notifications</span>
+                </a>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="settings.html" class="nav-item">
+                    <span class="nav-icon">⚙</span>
+                    <span>Settings</span>
+                </a>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <div>
+                    <h1>Team Matching</h1>
+                    <p>Find compatible teammates and build your ideal hackathon team.</p>
+                </div>
+
+                <div class="profile-mini">
+                    <div class="profile-avatar" id="profileAvatar">K</div>
+
+                    <div>
+                        <strong id="profileName">Student</strong>
+                        <span>Student</span>
+                    </div>
+                </div>
+
+            </header>
+
+
+            <!-- HERO -->
+            <section class="matching-hero">
+
+                <div class="hero-content">
+
+                    <div class="hero-text">
+
+                        <span class="hero-label">AI SMART TEAM MATCHING</span>
+
+                        <h2>
+                            Find the right team for
+                            <span>your skills.</span>
+                        </h2>
+
+                        <p>
+                            Discover teams based on your skills, interests,
+                            location and compatibility.
+                        </p>
+
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="hero-circle circle-one"></div>
+                        <div class="hero-circle circle-two"></div>
+
+                        <div class="team-visual-card">
+                            <div class="visual-person">AI</div>
+
+                            <div>
+                                <strong>Smart Matching</strong>
+                                <small>Skill + Interest + Location</small>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- FILTER SECTION -->
+            <section class="filter-section">
+
+                <div class="section-heading">
+                    <div>
+                        <h2>Find Your Team</h2>
+                        <p>Choose where you want your teammates to be from.</p>
+                    </div>
+
+                    <button class="clear-btn" id="clearFilters">
+                        Clear Filters
+                    </button>
+                </div>
+
+
+                <!-- SEARCH -->
+                <div class="search-box">
+
+                    <span class="search-icon">⌕</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search team name, domain or skill..."
+                    >
+
+                </div>
+
+
+                <!-- LOCATION FILTERS -->
+                <div class="filter-grid">
+
+                    <!-- REGION -->
+                    <div class="filter-group">
+
+                        <label for="regionFilter">
+                            Region
+                        </label>
+
+                        <select id="regionFilter">
+
+                            <option value="all">
+                                All Regions
+                            </option>
+
+                            <option value="South India">
+                                South India
+                            </option>
+
+                            <option value="North India">
+                                North India
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- STATE -->
+                    <div class="filter-group">
+
+                        <label for="stateFilter">
+                            State
+                        </label>
+
+                        <select id="stateFilter">
+
+                            <option value="all">
+                                All States
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- DISTRICT -->
+                    <div class="filter-group">
+
+                        <label for="districtFilter">
+                            District
+                        </label>
+
+                        <select id="districtFilter">
+
+                            <option value="all">
+                                All Districts
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- DOMAIN -->
+                    <div class="filter-group">
+
+                        <label for="domainFilter">
+                            Domain
+                        </label>
+
+                        <select id="domainFilter">
+
+                            <option value="all">
+                                All Domains
+                            </option>
+
+                            <option value="Web Development">
+                                Web Development
+                            </option>
+
+                            <option value="App Development">
+                                App Development
+                            </option>
+
+                            <option value="AI / Machine Learning">
+                                AI / Machine Learning
+                            </option>
+
+                            <option value="Data Science">
+                                Data Science
+                            </option>
+
+                            <option value="Cyber Security">
+                                Cyber Security
+                            </option>
+
+                            <option value="Cloud / DevOps">
+                                Cloud / DevOps
+                            </option>
+
+                            <option value="UI/UX">
+                                UI/UX
+                            </option>
+
+                            <option value="IoT / Embedded">
+                                IoT / Embedded
+                            </option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ACTIVE FILTER INFO -->
+                <div class="location-info">
+
+                    <div class="location-info-icon">
+                        📍
+                    </div>
+
+                    <div>
+                        <strong id="locationTitle">
+                            Showing teams from all locations
+                        </strong>
+
+                        <p id="locationDescription">
+                            Select a region, state or district to narrow your search.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- RESULTS -->
+            <section class="teams-section">
+
+                <div class="results-header">
+
+                    <div>
+                        <h2>Recommended Teams</h2>
+                        <p id="resultCount">Showing teams</p>
+                    </div>
+
+                    <select id="sortFilter" class="sort-filter">
+
+                        <option value="compatibility">
+                            Compatibility
+                        </option>
+
+                        <option value="vacancy">
+                            Vacancies
+                        </option>
+
+                        <option value="recent">
+                            Recently Created
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div id="teamsContainer" class="teams-grid"></div>
+
+
+                <div id="noResults" class="no-results hidden">
+
+                    <div class="no-results-icon">
+                        ◎
+                    </div>
+
+                    <h3>No matching teams found</h3>
+
+                    <p>
+                        Try changing your location, domain or search filters.
+                    </p>
+
+                    <button id="resetSearch">
+                        Reset Filters
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/team-matching.js"></script>
+    <script src="../js/sync-3d-bg.js"></script>
+
+</body>
+</html>

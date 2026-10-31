@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth & Progress | SYNC AI</title>
+
+    <link rel="stylesheet" href="../css/growth-progress.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo-area">
+            <div class="logo-circle">S</div>
+            <div>
+                <h2>SYNC AI</h2>
+                <span>Student Hub</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="find-hackathons.html" class="nav-item">
+                <span class="nav-icon">◈</span>
+                <span>Find Hackathons</span>
+            </a>
+
+            <a href="team-matching.html" class="nav-item">
+                <span class="nav-icon">◉</span>
+                <span>Team Matching</span>
+            </a>
+
+            <a href="my-skills.html" class="nav-item">
+                <span class="nav-icon">◇</span>
+                <span>My Skills</span>
+            </a>
+
+            <a href="growth-progress.html" class="nav-item active">
+                <span class="nav-icon">↗</span>
+                <span>Growth & Progress</span>
+            </a>
+
+            <a href="chat.html" class="nav-item">
+                <span class="nav-icon">▱</span>
+                <span>Chat</span>
+            </a>
+
+            <a href="my-teams.html" class="nav-item">
+                <span class="nav-icon">◎</span>
+                <span>My Teams</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <span class="nav-icon">♙</span>
+                <span>Profile</span>
+            </a>
+
+            <a href="ai-recommendations.html" class="nav-item">
+                <span class="nav-icon">✦</span>
+                <span>AI Recommendations</span>
+            </a>
+
+             <a href="notifications.html" class="nav-item">
+                <span class="nav-icon">♧</span>
+                <span>Notifications</span>
+                <span class="notification-dot"></span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+            <div class="sidebar-profile">
+                <div class="profile-avatar" id="sidebarAvatar">K</div>
+
+                <div class="profile-info">
+                    <strong id="sidebarName">Student</strong>
+                    <span>Student</span>
+                </div>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Header -->
+        <header class="top-header">
+
+            <div>
+                <p class="welcome-text">Your Learning Journey</p>
+                <h1>Growth & Progress</h1>
+                <p class="page-description">
+                    Track your improvement, learning streak and achievements.
+                </p>
+            </div>
+
+            <div class="header-profile">
+                <div class="header-avatar" id="headerAvatar">K</div>
+            </div>
+
+        </header>
+
+
+        <!-- Score Overview -->
+        <section class="score-grid">
+
+            <div class="growth-card main-growth-card">
+
+                <div class="card-top">
+                    <div>
+                        <p class="card-label">Growth Score</p>
+                        <h2 id="growthScore">0</h2>
+                        <span class="score-subtitle">Based on your learning progress</span>
+                    </div>
+
+                    <div class="growth-icon">↗</div>
+                </div>
+
+                <div class="progress-track">
+                    <div class="progress-fill" id="growthProgress"></div>
+                </div>
+
+                <div class="progress-labels">
+                    <span>Current Growth</span>
+                    <strong id="growthPercent">0%</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon blue">✓</div>
+
+                <div>
+                    <p>Verified Skill Score</p>
+                    <h2 id="verifiedScore">0</h2>
+                    <span>Assessment score</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon purple">⚡</div>
+
+                <div>
+                    <p>Learning Streak</p>
+                    <h2 id="learningStreak">0</h2>
+                    <span>Days of consistency</span>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon violet">★</div>
+
+                <div>
+                    <p>XP Points</p>
+                    <h2 id="xpPoints">0</h2>
+                    <span>Learning experience</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Main Grid -->
+        <section class="content-grid">
+
+            <!-- Skill Progress -->
+            <div class="panel skill-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Skill Improvement</h2>
+                        <p>Your latest verified skill performance</p>
+                    </div>
+
+                    <span class="panel-badge">Assessment</span>
+                </div>
+
+                <div class="skills-list">
+
+                    <div class="skill-row">
+                        <div class="skill-info">
+                            <span>Coding</span>
+                            <strong id="codingScore">0%</strong>
+                        </div>
+
+                        <div class="skill-track">
+                            <div class="skill-fill" id="codingBar"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-row">
+                        <div class="skill-info">
+                            <span>Problem Solving</span>
+                            <strong id="problemScore">0%</strong>
+                        </div>
+
+                        <div class="skill-track">
+                            <div class="skill-fill" id="problemBar"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-row">
+                        <div class="skill-info">
+                            <span>Logical Reasoning</span>
+                            <strong id="logicalScore">0%</strong>
+                        </div>
+
+                        <div class="skill-track">
+                            <div class="skill-fill" id="logicalBar"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-row">
+                        <div class="skill-info">
+                            <span>Communication</span>
+                            <strong id="communicationScore">0%</strong>
+                        </div>
+
+                        <div class="skill-track">
+                            <div class="skill-fill" id="communicationBar"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-row">
+                        <div class="skill-info">
+                            <span>Teamwork</span>
+                            <strong id="teamworkScore">0%</strong>
+                        </div>
+
+                        <div class="skill-track">
+                            <div class="skill-fill" id="teamworkBar"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Weekly Progress -->
+            <div class="panel weekly-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Weekly Progress</h2>
+                        <p>Keep improving every week</p>
+                    </div>
+                </div>
+
+                <div class="weekly-summary">
+
+                    <div class="weekly-number">
+                        <strong id="weeklyCompleted">1</strong>
+                        <span>Assessment completed</span>
+                    </div>
+
+                    <div class="weekly-circle">
+                        <span id="weeklyPercent">20%</span>
+                    </div>
+
+                </div>
+
+                <div class="weekly-items">
+
+                    <div class="weekly-item completed">
+                        <span class="status-dot">✓</span>
+                        <div>
+                            <strong>Initial Skill Assessment</strong>
+                            <small>Completed</small>
+                        </div>
+                    </div>
+
+                    <div class="weekly-item">
+                        <span class="status-dot">2</span>
+                        <div>
+                            <strong>Weekly Assignment</strong>
+                            <small>Coming soon</small>
+                        </div>
+                    </div>
+
+                    <div class="weekly-item">
+                        <span class="status-dot">3</span>
+                        <div>
+                            <strong>Communication Test</strong>
+                            <small>Coming soon</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Bottom Grid -->
+        <section class="bottom-grid">
+
+            <!-- Achievements -->
+            <div class="panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Improvement Badges</h2>
+                        <p>Achievements earned through progress</p>
+                    </div>
+                </div>
+
+                <div class="badges-grid">
+
+                    <div class="badge-card" id="badgeRising">
+                        <div class="badge-icon">↗</div>
+                        <strong>Rising Star</strong>
+                        <span>Growing skills</span>
+                    </div>
+
+                    <div class="badge-card" id="badgeFast">
+                        <div class="badge-icon">⚡</div>
+                        <strong>Fast Learner</strong>
+                        <span>Quick improvement</span>
+                    </div>
+
+                    <div class="badge-card" id="badgeConsistent">
+                        <div class="badge-icon">✓</div>
+                        <strong>Consistent Learner</strong>
+                        <span>Regular progress</span>
+                    </div>
+
+                    <div class="badge-card" id="badgeProblem">
+                        <div class="badge-icon">◆</div>
+                        <strong>Problem Solver</strong>
+                        <span>Strong reasoning</span>
+                    </div>
+
+                    <div class="badge-card" id="badgeTeam">
+                        <div class="badge-icon">◉</div>
+                        <strong>Team Player</strong>
+                        <span>Teamwork skill</span>
+                    </div>
+
+                    <div class="badge-card" id="badgeCommunicator">
+                        <div class="badge-icon">◇</div>
+                        <strong>Excellent Communicator</strong>
+                        <span>Communication skill</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Recent Activity -->
+            <div class="panel activity-panel">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Recent Progress</h2>
+                        <p>Your latest learning activity</p>
+                    </div>
+                </div>
+
+                <div class="activity-list">
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">✓</div>
+
+                        <div>
+                            <strong>Skill Assessment Completed</strong>
+                            <span id="assessmentDate">
+                                Initial assessment completed
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">★</div>
+
+                        <div>
+                            <strong>Profile Progress</strong>
+                            <span>Student profile completed</span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">↗</div>
+
+                        <div>
+                            <strong>Next Step</strong>
+                            <span>Complete weekly assignments to grow your score</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/growth-progress.js"></script>
+<script src="../js/sync-3d-bg.js"></script>
+
+</body>
+</html>

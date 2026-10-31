@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SYNC AI - Verify Email</title>
+
+    <link
+        rel="stylesheet"
+        href="../css/otp.css"
+    >
+    <link
+        rel="stylesheet"
+        href="../css/sync-3d-bg.css"
+    >
+
+</head>
+
+
+
+<body>
+
+    <main class="otp-page">
+
+
+        <!-- =================================
+             LEFT VISUAL SECTION
+        ================================== -->
+
+        <section class="visual-section">
+
+            <div class="brand">
+
+                <div class="brand-mark">
+                    S
+                </div>
+
+                <div class="brand-name">
+                    Sync <span>AI</span>
+                </div>
+
+            </div>
+
+
+            <div class="visual-content">
+
+                <div class="small-label">
+                    SECURE STUDENT VERIFICATION
+                </div>
+
+
+                <h1>
+
+                    One step closer to
+                    <span>your next team.</span>
+
+                </h1>
+
+
+                <p>
+
+                    We verify your college email to help
+                    create a trusted student community
+                    for hackathons and team collaboration.
+
+                </p>
+
+
+                <!-- Real Image -->
+
+                <div class="image-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85"
+                        alt="Students collaborating together"
+                    >
+
+                    <div class="image-overlay">
+
+                        <div class="verified-icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Trusted Student Network
+                            </strong>
+
+                            <p>
+                                College identity verification
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="visual-footer">
+
+                Better Skills
+                <span>•</span>
+                Better Teams
+                <span>•</span>
+                Bigger Dreams
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================
+             RIGHT OTP SECTION
+        ================================== -->
+
+        <section class="form-section">
+
+
+            <div class="otp-card">
+
+
+                <!-- Mobile Brand -->
+
+                <div class="mobile-brand">
+
+                    <div class="brand-mark">
+                        S
+                    </div>
+
+                    <div class="brand-name">
+                        Sync <span>AI</span>
+                    </div>
+
+                </div>
+
+
+
+                <!-- Back -->
+
+                <a
+                    href="signup.html"
+                    class="back-link"
+                >
+                    ← Back to account details
+                </a>
+
+
+
+                <!-- Heading -->
+
+                <div class="otp-heading">
+
+                    <div class="step-label">
+                        STEP 2 OF 3
+                    </div>
+
+                    <h2>
+                        Verify your college email
+                    </h2>
+
+                    <p>
+                        We've sent a 6-digit verification
+                        code to your college email.
+                    </p>
+
+                </div>
+
+
+
+                <!-- Email -->
+
+                <div class="email-display">
+
+                    <div class="email-icon">
+                        @
+                    </div>
+
+                    <div>
+
+                        <span>
+                            Verification email
+                        </span>
+
+                        <strong id="emailDisplay">
+                            Loading...
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- OTP FORM -->
+
+                <form id="otpForm">
+
+
+                    <label class="otp-label">
+                        Enter verification code
+                    </label>
+
+
+                    <div class="otp-inputs">
+
+                        <input
+                            type="text"
+                            maxlength="1"
+                            inputmode="numeric"
+                            class="otp-input"
+                            autocomplete="one-time-code"
+                        >
+
+                        <input
+                            type="text"
+                            maxlength="1"
+                            inputmode="numeric"
+                            class="otp-input"
+                        >
+
+                        <input
+                            type="text"
+                            maxlength="1"
+                            inputmode="numeric"
+                            class="otp-input"
+                        >
+
+                        <input
+                            type="text"
+                            maxlength="1"
+                            inputmode="numeric"
+                            class="otp-input"
+                        >
+
+                        <input
+                            type="text"
+                            maxlength="1"
+                            inputmode="numeric"
+                            class="otp-input"
+                        >
+
+                        <input
+                            type="text"
+                            maxlength="1"
+                            inputmode="numeric"
+                            class="otp-input"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Demo OTP -->
+
+                    <div class="demo-code">
+
+                        <span>
+                            Prototype Demo OTP
+                        </span>
+
+                        <strong>
+                            123456
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- Timer -->
+
+                    <div class="timer-section">
+
+                        <span>
+                            Didn't receive the code?
+                        </span>
+
+                        <strong id="timer">
+                            01:00
+                        </strong>
+
+                    </div>
+
+
+
+                    <!-- Verify -->
+
+                    <button
+                        type="submit"
+                        class="verify-button"
+                    >
+
+                        Verify Email
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- Resend -->
+
+                <button
+                    type="button"
+                    id="resendBtn"
+                    class="resend-button"
+                    disabled
+                >
+                    Resend OTP
+                </button>
+
+
+
+                <!-- Security -->
+
+                <div class="security-note">
+
+                    <div class="security-icon">
+                        ✓
+                    </div>
+
+                    <p>
+                        Your college email is used only for
+                        student verification in this prototype.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/api.js"></script>
+    <script src="../js/otp.js"></script>
+    <script src="../js/sync-3d-bg.js"></script>
+
+</body>
+
+</html>

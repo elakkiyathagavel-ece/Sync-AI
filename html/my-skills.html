@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Skills - SYNC AI</title>
+
+    <link rel="stylesheet" href="../css/my-skills.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">S</div>
+
+            <div>
+                <h2>SYNC AI</h2>
+                <p>Smart Team Matching</p>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="find-hackathons.html" class="nav-item">
+                <span class="nav-icon">◈</span>
+                <span>Find Hackathons</span>
+            </a>
+
+            <a href="team-matching.html" class="nav-item">
+                <span class="nav-icon">◎</span>
+                <span>Team Matching</span>
+            </a>
+
+            <a href="my-skills.html" class="nav-item active">
+                <span class="nav-icon">◇</span>
+                <span>My Skills</span>
+            </a>
+
+            <a href="growth-progress.html" class="nav-item">
+                <span class="nav-icon">↗</span>
+                <span>Growth & Progress</span>
+            </a>
+
+            <a href="chat.html" class="nav-item">
+                <span class="nav-icon">◌</span>
+                <span>Chat</span>
+            </a>
+
+            <a href="my-teams.html" class="nav-item">
+                <span class="nav-icon">♢</span>
+                <span>My Teams</span>
+            </a>
+
+            <a href="ai-recommendations.html" class="nav-item">
+                <span class="nav-icon">☆</span>
+                <span>AI Recommendations</span>
+            </a>
+
+            <a href="notifications.html" class="nav-item">
+                <span class="nav-icon">♧</span>
+                <span>Notifications</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+                <h1>My Skills</h1>
+                <p>View your verified skills and assessment performance.</p>
+            </div>
+
+            <div class="profile-mini">
+
+                <div class="profile-avatar" id="profileAvatar">
+                    K
+                </div>
+
+                <div>
+                    <strong id="profileName">Student</strong>
+                    <span>Student</span>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- SKILL SUMMARY -->
+        <section class="skill-summary">
+
+            <div class="summary-content">
+
+                <div class="summary-text">
+
+                    <span class="summary-label">
+                        VERIFIED SKILL PROFILE
+                    </span>
+
+                    <h2>
+                        Your skills,
+                        <span>your progress.</span>
+                    </h2>
+
+                    <p>
+                        Your verified skill score is calculated from your
+                        SYNC AI assessment. Keep learning and improving
+                        your skills to increase your growth.
+                    </p>
+
+                </div>
+
+
+                <div class="score-card">
+
+                    <div class="score-circle">
+                        <div>
+                            <strong id="overallScore">0</strong>
+                            <span>/100</span>
+                        </div>
+                    </div>
+
+                    <div class="score-info">
+                        <strong>Verified Skill Score</strong>
+                        <span id="scoreStatus">
+                            Assessment Score
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILL BREAKDOWN -->
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Skill Breakdown</h2>
+                    <p>
+                        Your performance across different skill areas.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="skills-grid">
+
+                <!-- CODING -->
+                <div class="skill-card">
+
+                    <div class="skill-card-top">
+
+                        <div class="skill-icon">
+                            &lt;/&gt;
+                        </div>
+
+                        <div>
+                            <h3>Coding</h3>
+                            <p>Programming & implementation</p>
+                        </div>
+
+                        <strong id="codingScore">0%</strong>
+
+                    </div>
+
+                    <div class="progress">
+                        <div
+                            class="progress-bar"
+                            id="codingBar"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <!-- PROBLEM SOLVING -->
+                <div class="skill-card">
+
+                    <div class="skill-card-top">
+
+                        <div class="skill-icon">
+                            PS
+                        </div>
+
+                        <div>
+                            <h3>Problem Solving</h3>
+                            <p>Logic & analytical thinking</p>
+                        </div>
+
+                        <strong id="problemScore">0%</strong>
+
+                    </div>
+
+                    <div class="progress">
+                        <div
+                            class="progress-bar"
+                            id="problemBar"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <!-- LOGICAL -->
+                <div class="skill-card">
+
+                    <div class="skill-card-top">
+
+                        <div class="skill-icon">
+                            LR
+                        </div>
+
+                        <div>
+                            <h3>Logical Reasoning</h3>
+                            <p>Reasoning & decision making</p>
+                        </div>
+
+                        <strong id="logicalScore">0%</strong>
+
+                    </div>
+
+                    <div class="progress">
+                        <div
+                            class="progress-bar"
+                            id="logicalBar"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <!-- COMMUNICATION -->
+                <div class="skill-card">
+
+                    <div class="skill-card-top">
+
+                        <div class="skill-icon">
+                            CO
+                        </div>
+
+                        <div>
+                            <h3>Communication</h3>
+                            <p>Communication & expression</p>
+                        </div>
+
+                        <strong id="communicationScore">0%</strong>
+
+                    </div>
+
+                    <div class="progress">
+                        <div
+                            class="progress-bar"
+                            id="communicationBar"
+                        ></div>
+                    </div>
+
+                </div>
+
+
+                <!-- TEAMWORK -->
+                <div class="skill-card">
+
+                    <div class="skill-card-top">
+
+                        <div class="skill-icon">
+                            TW
+                        </div>
+
+                        <div>
+                            <h3>Teamwork</h3>
+                            <p>Collaboration & team skills</p>
+                        </div>
+
+                        <strong id="teamworkScore">0%</strong>
+
+                    </div>
+
+                    <div class="progress">
+                        <div
+                            class="progress-bar"
+                            id="teamworkBar"
+                        ></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SKILL TAGS -->
+        <section class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>My Technical Skills</h2>
+                    <p>
+                        Skills associated with your profile.
+                    </p>
+                </div>
+
+                <button class="edit-btn" id="editSkillsBtn">
+                    Edit Skills
+                </button>
+
+            </div>
+
+
+            <div class="technical-skills" id="technicalSkills">
+
+                <span class="skill-tag">HTML</span>
+                <span class="skill-tag">CSS</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Python</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- PERFORMANCE -->
+        <section class="section">
+
+            <div class="performance-card">
+
+                <div class="performance-icon">
+                    ↗
+                </div>
+
+                <div>
+                    <h3>Keep improving your skills</h3>
+
+                    <p>
+                        Your verified skill score represents your current
+                        assessment performance. Complete future weekly
+                        assessments to track your improvement.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/my-skills.js"></script>
+<script src="../js/sync-3d-bg.js"></script>
+
+</body>
+</html>

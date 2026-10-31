@@ -1,0 +1,1095 @@
+/* =========================================
+   SYNC AI - OTP VERIFICATION
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --navy: #101936;
+    --purple: #6254ed;
+    --purple-light: #8175f5;
+
+    --text-dark: #17213f;
+    --text-gray: #737b91;
+
+    --border: #dfe3ed;
+
+    --background: #f6f7fc;
+    --white: #ffffff;
+
+}
+
+body {
+
+    font-family:
+        Inter,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: var(--background);
+
+    color: var(--text-dark);
+
+    min-height: 100vh;
+
+}
+
+
+/* =========================================
+   PAGE
+========================================= */
+
+.otp-page {
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(470px, 45%)
+        minmax(500px, 55%);
+
+}
+
+
+/* =========================================
+   LEFT SECTION
+========================================= */
+
+.visual-section {
+
+    position: relative;
+
+    padding:
+        40px
+        clamp(40px, 6vw, 85px);
+
+    background:
+        linear-gradient(
+            145deg,
+            #0c1531,
+            #111c3d 60%,
+            #161f45
+        );
+
+    color: white;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+}
+
+
+.visual-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    right: -250px;
+    bottom: -220px;
+
+    border-radius: 50%;
+
+    background: #654df0;
+
+    opacity: 0.20;
+
+    filter: blur(85px);
+
+}
+
+
+.visual-section::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    left: -130px;
+    top: 40%;
+
+    border-radius: 50%;
+
+    background: #526cff;
+
+    opacity: 0.10;
+
+    filter: blur(70px);
+
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.brand-mark {
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6254ed,
+            #8b7cff
+        );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 25px
+        rgba(98, 84, 237, 0.35);
+
+}
+
+
+.brand-name {
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+}
+
+
+.brand-name span {
+
+    color: #8175ff;
+
+}
+
+
+/* =========================================
+   VISUAL CONTENT
+========================================= */
+
+.visual-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 580px;
+
+    margin-top: 105px;
+
+}
+
+
+.small-label {
+
+    display: inline-block;
+
+    padding: 8px 13px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.10);
+
+    color: #aaa2ff;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.visual-content h1 {
+
+    font-size:
+        clamp(38px, 4vw, 55px);
+
+    line-height: 1.08;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.visual-content h1 span {
+
+    display: block;
+
+    color: #887bff;
+
+}
+
+
+.visual-content > p {
+
+    color: #b9bfd3;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    max-width: 510px;
+
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.image-card {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 220px;
+
+    margin-top: 35px;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 25px 50px
+        rgba(0, 0, 0, 0.28);
+
+}
+
+
+.image-card img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.image-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(8, 15, 38, 0.90),
+            rgba(8, 15, 38, 0.05)
+        );
+
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.image-overlay {
+
+    position: absolute;
+
+    z-index: 3;
+
+    left: 18px;
+    right: 18px;
+    bottom: 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+.verified-icon {
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6254ed,
+            #8275f6
+        );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 800;
+
+}
+
+
+.image-overlay strong {
+
+    font-size: 14px;
+
+}
+
+
+.image-overlay p {
+
+    color: #c2c7d6;
+
+    font-size: 11px;
+
+    margin-top: 4px;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.visual-footer {
+
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: auto;
+
+    color: #858da8;
+
+    font-size: 12px;
+
+}
+
+
+.visual-footer span {
+
+    color: #6254ed;
+
+}
+
+
+/* =========================================
+   RIGHT SECTION
+========================================= */
+
+.form-section {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 35px;
+
+}
+
+
+.otp-card {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    background: white;
+
+    border-radius: 23px;
+
+    padding: 42px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(30, 38, 70, 0.10);
+
+    border:
+        1px solid
+        rgba(220, 224, 237, 0.8);
+
+}
+
+
+/* =========================================
+   MOBILE BRAND
+========================================= */
+
+.mobile-brand {
+
+    display: none;
+
+}
+
+
+/* =========================================
+   BACK LINK
+========================================= */
+
+.back-link {
+
+    color: #737a8e;
+
+    font-size: 12px;
+
+    text-decoration: none;
+
+    display: inline-block;
+
+    margin-bottom: 28px;
+
+}
+
+
+.back-link:hover {
+
+    color: var(--purple);
+
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.step-label {
+
+    color: var(--purple);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+
+    margin-bottom: 9px;
+
+}
+
+
+.otp-heading h2 {
+
+    font-size: 29px;
+
+    letter-spacing: -0.7px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.otp-heading p {
+
+    color: var(--text-gray);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* =========================================
+   EMAIL DISPLAY
+========================================= */
+
+.email-display {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px;
+
+    border:
+        1px solid
+        #e4e6ef;
+
+    background: #fafbff;
+
+    border-radius: 11px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.email-icon {
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    background: #efedff;
+
+    color: var(--purple);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 800;
+
+}
+
+
+.email-display span {
+
+    display: block;
+
+    color: #9a9faf;
+
+    font-size: 9px;
+
+    margin-bottom: 3px;
+
+}
+
+
+.email-display strong {
+
+    display: block;
+
+    color: #313952;
+
+    font-size: 12px;
+
+    word-break: break-all;
+
+}
+
+
+/* =========================================
+   OTP LABEL
+========================================= */
+
+.otp-label {
+
+    display: block;
+
+    color: #303850;
+
+    font-size: 13px;
+
+    font-weight: 650;
+
+    margin-bottom: 12px;
+
+}
+
+
+/* =========================================
+   OTP INPUTS
+========================================= */
+
+.otp-inputs {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, 1fr);
+
+    gap: 9px;
+
+}
+
+
+.otp-input {
+
+    width: 100%;
+
+    height: 56px;
+
+    border:
+        1px solid
+        #dfe3ed;
+
+    border-radius: 10px;
+
+    background: #fbfcff;
+
+    text-align: center;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    color: #2c3553;
+
+    outline: none;
+
+    transition: 0.2s ease;
+
+}
+
+
+.otp-input:focus {
+
+    border-color: var(--purple);
+
+    background: white;
+
+    box-shadow:
+        0 0 0 4px
+        rgba(98, 84, 237, 0.09);
+
+}
+
+
+/* =========================================
+   DEMO CODE
+========================================= */
+
+.demo-code {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-top: 15px;
+
+    padding: 10px 12px;
+
+    background: #f4f2ff;
+
+    border-radius: 8px;
+
+}
+
+
+.demo-code span {
+
+    color: #777e94;
+
+    font-size: 10px;
+
+}
+
+
+.demo-code strong {
+
+    color: var(--purple);
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================================
+   TIMER
+========================================= */
+
+.timer-section {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 18px 0;
+
+}
+
+
+.timer-section span {
+
+    color: #898fa1;
+
+    font-size: 11px;
+
+}
+
+
+.timer-section strong {
+
+    color: var(--purple);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================
+   VERIFY BUTTON
+========================================= */
+
+.verify-button {
+
+    width: 100%;
+
+    height: 52px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #5849e8,
+            #7567f5
+        );
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    box-shadow:
+        0 9px 22px
+        rgba(88, 73, 232, 0.20);
+
+    transition: 0.2s ease;
+
+}
+
+
+.verify-button:hover {
+
+    transform: translateY(-2px);
+
+}
+
+
+.verify-button span {
+
+    font-size: 18px;
+
+}
+
+
+/* =========================================
+   RESEND
+========================================= */
+
+.resend-button {
+
+    display: block;
+
+    margin:
+        17px auto 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--purple);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+
+.resend-button:disabled {
+
+    color: #b0b4c0;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =========================================
+   SECURITY
+========================================= */
+
+.security-note {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        #eceef4;
+
+}
+
+
+.security-icon {
+
+    width: 19px;
+    height: 19px;
+
+    border-radius: 50%;
+
+    background: #e6f6ef;
+
+    color: #2d9b71;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    flex-shrink: 0;
+
+}
+
+
+.security-note p {
+
+    color: #969baa;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .otp-page {
+
+        grid-template-columns:
+            40%
+            60%;
+
+    }
+
+    .visual-section {
+
+        padding: 35px;
+
+    }
+
+    .visual-content {
+
+        margin-top: 75px;
+
+    }
+
+    .visual-content h1 {
+
+        font-size: 40px;
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .otp-page {
+
+        display: block;
+
+    }
+
+    .visual-section {
+
+        display: none;
+
+    }
+
+    .form-section {
+
+        min-height: 100vh;
+
+        padding:
+            20px 15px;
+
+    }
+
+    .otp-card {
+
+        max-width: 500px;
+
+        padding:
+            30px 25px;
+
+    }
+
+    .mobile-brand {
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+
+        margin-bottom: 25px;
+
+    }
+
+    .mobile-brand .brand-mark {
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 21px;
+
+    }
+
+    .mobile-brand .brand-name {
+
+        font-size: 25px;
+
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .otp-card {
+
+        padding:
+            27px 18px;
+
+    }
+
+    .otp-heading h2 {
+
+        font-size: 25px;
+
+    }
+
+    .otp-inputs {
+
+        gap: 5px;
+
+    }
+
+    .otp-input {
+
+        height: 50px;
+
+        font-size: 18px;
+
+    }
+
+}
+.otp-input.otp-error {
+    border-color: #e05252;
+    background: #fff6f6;
+    animation: otpShake 0.25s ease;
+}
+
+@keyframes otpShake {
+
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-4px);
+    }
+
+    50% {
+        transform: translateX(4px);
+    }
+
+    75% {
+        transform: translateX(-4px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+
+}

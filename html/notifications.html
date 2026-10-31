@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications | SYNC AI</title>
+    <link rel="stylesheet" href="../css/notifications.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">S</div>
+            <div>
+                <h2>SYNC AI</h2>
+                <span>Smart Team Matching</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="find-hackathons.html" class="nav-item">
+                <span class="nav-icon">◈</span>
+                <span>Find Hackathons</span>
+            </a>
+
+            <a href="team-matching.html" class="nav-item">
+                <span class="nav-icon">◉</span>
+                <span>Team Matching</span>
+            </a>
+
+            <a href="my-skills.html" class="nav-item">
+                <span class="nav-icon">◆</span>
+                <span>My Skills</span>
+            </a>
+
+            <a href="growth-progress.html" class="nav-item">
+                <span class="nav-icon">↗</span>
+                <span>Growth &amp; Progress</span>
+            </a>
+
+            <a href="chat.html" class="nav-item">
+                <span class="nav-icon">◌</span>
+                <span>Chat</span>
+            </a>
+
+            <a href="my-teams.html" class="nav-item">
+                <span class="nav-icon">◇</span>
+                <span>My Teams</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <span class="nav-icon">○</span>
+                <span>Profile</span>
+            </a>
+
+            <a href="ai-recommendations.html" class="nav-item">
+                <span class="nav-icon">✦</span>
+                <span>AI Recommendations</span>
+            </a>
+
+            <a href="notifications.html" class="nav-item active">
+                <span class="nav-icon">♢</span>
+                <span>Notifications</span>
+                <span class="sidebar-badge" id="sidebarBadge">0</span>
+            </a>
+
+            <!-- SETTINGS ONLY AT THE END -->
+            <a href="settings.html" class="nav-item">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="sidebar-tip">
+                <div class="tip-icon">✦</div>
+
+                <div>
+                    <strong>Keep growing</strong>
+                    <p>
+                        Complete weekly tasks to improve your
+                        Growth Score.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+        <header class="topbar">
+
+            <div>
+                <p class="breadcrumb">
+                    Dashboard / Notifications
+                </p>
+
+                <h1>Notifications</h1>
+
+                <p class="page-subtitle">
+                    Stay updated with your teams, hackathons and
+                    learning progress.
+                </p>
+            </div>
+
+            <div class="top-profile">
+
+                <div class="notification-top-icon">
+                    ♢
+                    <span id="topBadge">0</span>
+                </div>
+
+                <div class="profile-mini">
+
+                    <div class="profile-avatar" id="profileAvatar">
+                        K
+                    </div>
+
+                    <div>
+                        <strong id="profileName">
+                            Student
+                        </strong>
+
+                        <span>Student</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- HERO -->
+        <section class="notification-hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    SYNC AI UPDATES
+                </span>
+
+                <h2>
+                    Everything important, in one place.
+                </h2>
+
+                <p>
+                    Get notified about team invitations,
+                    AI team matches, hackathon updates and
+                    your learning progress.
+                </p>
+
+                <div class="hero-stats">
+
+                    <div>
+                        <strong id="totalCount">0</strong>
+                        <span>Total</span>
+                    </div>
+
+                    <div>
+                        <strong id="unreadCount">0</strong>
+                        <span>Unread</span>
+                    </div>
+
+                    <div>
+                        <strong id="todayCount">0</strong>
+                        <span>Recent</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=85"
+                    alt="Students collaborating">
+            </div>
+
+        </section>
+
+
+        <!-- FILTER BAR -->
+        <section class="notification-actions">
+
+            <div class="filter-buttons">
+
+                <button class="filter-btn active"
+                        data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="team">
+                    Teams
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="hackathon">
+                    Hackathons
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="growth">
+                    Growth
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="system">
+                    System
+                </button>
+
+            </div>
+
+            <button class="mark-read-btn" id="markAllRead">
+                ✓ Mark all as read
+            </button>
+
+        </section>
+
+
+        <!-- NOTIFICATIONS -->
+        <section class="notifications-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Your Updates</h2>
+                    <p>Recent activity from SYNC AI</p>
+                </div>
+
+                <span
+                    class="notification-count-label"
+                    id="countLabel">
+                    0 notifications
+                </span>
+
+            </div>
+
+            <div
+                id="notificationList"
+                class="notification-list">
+            </div>
+
+            <div
+                id="emptyState"
+                class="empty-state hidden">
+
+                <div class="empty-icon">✓</div>
+
+                <h3>No notifications here</h3>
+
+                <p>
+                    You're all caught up. New updates will
+                    appear here.
+                </p>
+
+                <button id="showAllBtn">
+                    View all notifications
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= TEAM SCORE ================= -->
+
+        <section class="team-score-section">
+
+            <div class="section-heading team-score-heading">
+
+                <div>
+                    <span class="section-label">
+                        TEAM PERFORMANCE
+                    </span>
+
+                    <h2>Team Score</h2>
+
+                    <p>
+                        Understand your team's compatibility,
+                        balance and collaboration strength.
+                    </p>
+                </div>
+
+                <div class="team-score-badge">
+                    <span>Overall Score</span>
+                    <strong id="overallTeamScore">89</strong>
+                    <small>/100</small>
+                </div>
+
+            </div>
+
+
+            <!-- TEAM SCORE HERO -->
+            <div class="team-score-card">
+
+                <div class="team-score-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85"
+                        alt="Team working together">
+
+                    <div class="image-overlay">
+                        <span>Current Team</span>
+                        <strong id="teamName">
+                            CodeCrafters
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <div class="team-score-details">
+
+                    <div class="team-info-row">
+
+                        <div>
+                            <span>Hackathon</span>
+                            <strong>Smart India Hackathon</strong>
+                        </div>
+
+                        <div>
+                            <span>Domain</span>
+                            <strong>Web Development</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="score-progress-main">
+
+                        <div class="progress-label">
+                            <span>Team Readiness</span>
+                            <strong>89%</strong>
+                        </div>
+
+                        <div class="progress-track">
+                            <div
+                                class="progress-fill"
+                                style="width: 89%;">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <p class="score-description">
+                        Your team has a balanced combination of
+                        technical skills, communication,
+                        teamwork and consistent learning.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- SCORE BREAKDOWN -->
+
+            <div class="score-grid">
+
+                <div class="score-item">
+
+                    <div class="score-icon blue">
+                        ◉
+                    </div>
+
+                    <div class="score-item-content">
+
+                        <div class="score-item-top">
+                            <span>Team Compatibility</span>
+                            <strong>94%</strong>
+                        </div>
+
+                        <div class="small-progress">
+                            <div
+                                class="small-fill"
+                                style="width:94%;">
+                            </div>
+                        </div>
+
+                        <p>
+                            Skills and preferences match well.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="score-item">
+
+                    <div class="score-icon purple">
+                        ◆
+                    </div>
+
+                    <div class="score-item-content">
+
+                        <div class="score-item-top">
+                            <span>Skill Balance</span>
+                            <strong>90%</strong>
+                        </div>
+
+                        <div class="small-progress">
+                            <div
+                                class="small-fill"
+                                style="width:90%;">
+                            </div>
+                        </div>
+
+                        <p>
+                            Different technical skills are covered.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="score-item">
+
+                    <div class="score-icon green">
+                        ◌
+                    </div>
+
+                    <div class="score-item-content">
+
+                        <div class="score-item-top">
+                            <span>Communication</span>
+                            <strong>86%</strong>
+                        </div>
+
+                        <div class="small-progress">
+                            <div
+                                class="small-fill"
+                                style="width:86%;">
+                            </div>
+                        </div>
+
+                        <p>
+                            Good communication across the team.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="score-item">
+
+                    <div class="score-icon orange">
+                        ◇
+                    </div>
+
+                    <div class="score-item-content">
+
+                        <div class="score-item-top">
+                            <span>Teamwork</span>
+                            <strong>91%</strong>
+                        </div>
+
+                        <div class="small-progress">
+                            <div
+                                class="small-fill"
+                                style="width:91%;">
+                            </div>
+                        </div>
+
+                        <p>
+                            Members collaborate consistently.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="score-item">
+
+                    <div class="score-icon blue">
+                        ✓
+                    </div>
+
+                    <div class="score-item-content">
+
+                        <div class="score-item-top">
+                            <span>Reliability</span>
+                            <strong>88%</strong>
+                        </div>
+
+                        <div class="small-progress">
+                            <div
+                                class="small-fill"
+                                style="width:88%;">
+                            </div>
+                        </div>
+
+                        <p>
+                            Strong participation and consistency.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="score-item">
+
+                    <div class="score-icon purple">
+                        ↗
+                    </div>
+
+                    <div class="score-item-content">
+
+                        <div class="score-item-top">
+                            <span>Growth</span>
+                            <strong>85%</strong>
+                        </div>
+
+                        <div class="small-progress">
+                            <div
+                                class="small-fill"
+                                style="width:85%;">
+                            </div>
+                        </div>
+
+                        <p>
+                            Members are improving their skills.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TEAM MEMBERS -->
+
+            <div class="members-card">
+
+                <div class="members-header">
+
+                    <div>
+                        <h3>Member Contributions</h3>
+                        <p>
+                            Team activity and individual contribution
+                        </p>
+                    </div>
+
+                    <span class="members-count">
+                        4 Members
+                    </span>
+
+                </div>
+
+
+                <div class="members-list">
+
+                    <div class="member-row">
+
+                        <div class="member-avatar avatar-one">
+                            A
+                        </div>
+
+                        <div class="member-info">
+                            <strong>Arun Kumar</strong>
+                            <span>Team Leader · Frontend</span>
+                        </div>
+
+                        <div class="member-score">
+                            <span>Contribution</span>
+                            <strong>92%</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-row">
+
+                        <div class="member-avatar avatar-two">
+                            M
+                        </div>
+
+                        <div class="member-info">
+                            <strong>Meena Priya</strong>
+                            <span>UI/UX · Design</span>
+                        </div>
+
+                        <div class="member-score">
+                            <span>Contribution</span>
+                            <strong>89%</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-row">
+
+                        <div class="member-avatar avatar-three">
+                            R
+                        </div>
+
+                        <div class="member-info">
+                            <strong>Rahul S</strong>
+                            <span>Backend · JavaScript</span>
+                        </div>
+
+                        <div class="member-score">
+                            <span>Contribution</span>
+                            <strong>87%</strong>
+                        </div>
+
+                    </div>
+
+
+                    <div class="member-row">
+
+                        <div class="member-avatar avatar-four">
+                            K
+                        </div>
+
+                        <div class="member-info">
+                            <strong id="currentStudentName">
+                                You
+                            </strong>
+                            <span>Developer · Team Member</span>
+                        </div>
+
+                        <div class="member-score">
+                            <span>Contribution</span>
+                            <strong>86%</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFO CARD -->
+
+        <section class="notification-info">
+
+            <div class="info-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=85"
+                    alt="Team collaboration">
+
+            </div>
+
+            <div class="info-content">
+
+                <span>SMART UPDATES</span>
+
+                <h3>
+                    Don't miss your next opportunity
+                </h3>
+
+                <p>
+                    SYNC AI keeps you informed when a team
+                    matches your skills, when a teammate sends
+                    an invitation, or when your learning progress
+                    changes.
+                </p>
+
+                <a href="team-matching.html">
+                    Explore Team Matching →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/notifications.js"></script>
+<script src="../js/sync-3d-bg.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Recommendations - SYNC AI</title>
+    <link rel="stylesheet" href="../css/ai-recommendations.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+
+<body>
+
+<div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="logo-area">
+            <div class="logo-circle">S</div>
+
+            <div>
+                <h2>SYNC AI</h2>
+                <span>Smart Team Matching</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html" class="nav-item">
+                <span class="nav-icon">⌂</span>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="find-hackathons.html" class="nav-item">
+                <span class="nav-icon">⌕</span>
+                <span>Find Hackathons</span>
+            </a>
+
+            <a href="team-matching.html" class="nav-item">
+                <span class="nav-icon">◈</span>
+                <span>Team Matching</span>
+            </a>
+
+            <a href="my-skills.html" class="nav-item">
+                <span class="nav-icon">◇</span>
+                <span>My Skills</span>
+            </a>
+
+            <a href="growth-progress.html" class="nav-item">
+                <span class="nav-icon">↗</span>
+                <span>Growth & Progress</span>
+            </a>
+
+            <a href="chat.html" class="nav-item">
+                <span class="nav-icon">▢</span>
+                <span>Chat</span>
+            </a>
+
+            <a href="my-teams.html" class="nav-item">
+                <span class="nav-icon">♧</span>
+                <span>My Teams</span>
+            </a>
+
+            <a href="profile.html" class="nav-item">
+                <span class="nav-icon">○</span>
+                <span>Profile</span>
+            </a>
+
+            <a href="ai-recommendations.html" class="nav-item active">
+                <span class="nav-icon">✦</span>
+                <span>AI Recommendations</span>
+            </a>
+
+            <a href="notifications.html" class="nav-item">
+                <span class="nav-icon">♢</span>
+                <span>Notifications</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="user-mini">
+
+                <div class="mini-avatar" id="sidebarAvatar">
+                    K
+                </div>
+
+                <div>
+                    <strong id="sidebarName">Student</strong>
+                    <span>Student</span>
+                </div>
+
+            </div>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <header class="top-header">
+
+            <div>
+                <p class="page-label">AI POWERED</p>
+
+                <h1>AI Team Recommendations</h1>
+
+                <p class="page-subtitle">
+                    Discover teams that match your skills, interests and location.
+                </p>
+            </div>
+
+            <div class="ai-status">
+                <span class="status-dot"></span>
+                AI Matching Active
+            </div>
+
+        </header>
+
+
+        <!-- AI HERO -->
+        <section class="ai-hero">
+
+            <div class="ai-hero-content">
+
+                <span class="ai-label">SMART MATCHING</span>
+
+                <h2>Find the right team for your next hackathon.</h2>
+
+                <p>
+                    SYNC AI analyzes your verified skills, preferred domains,
+                    growth profile and location to identify compatible teams.
+                </p>
+
+                <button id="refreshBtn">
+                    Refresh Recommendations
+                </button>
+
+            </div>
+
+            <div class="ai-hero-image">
+                <img
+                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=85"
+                    alt="Students collaborating in a team"
+                >
+            </div>
+
+        </section>
+
+
+        <!-- MATCH SUMMARY -->
+        <section class="summary-grid">
+
+            <div class="summary-card">
+                <span>Recommended Teams</span>
+                <strong id="teamCount">4</strong>
+                <small>Based on your profile</small>
+            </div>
+
+            <div class="summary-card">
+                <span>Best Compatibility</span>
+                <strong>94%</strong>
+                <small>Team compatibility</small>
+            </div>
+
+            <div class="summary-card">
+                <span>Matching Domain</span>
+                <strong id="domainSummary">Web</strong>
+                <small>Your preferred domain</small>
+            </div>
+
+            <div class="summary-card">
+                <span>Location Match</span>
+                <strong id="locationSummary">Local</strong>
+                <small>District / State match</small>
+            </div>
+
+        </section>
+
+
+        <!-- RECOMMENDATIONS -->
+        <section class="content-card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>Recommended For You</h2>
+
+                    <p>
+                        Teams selected using your current profile information.
+                    </p>
+                </div>
+
+                <span class="recommendation-count">
+                    AI Results
+                </span>
+
+            </div>
+
+
+            <div class="recommendation-grid" id="recommendationGrid">
+
+                <!-- JavaScript loads cards -->
+
+            </div>
+
+        </section>
+
+
+        <!-- HOW AI MATCHES -->
+        <section class="content-card">
+
+            <div class="section-heading">
+
+                <div>
+                    <h2>How SYNC AI Matches You</h2>
+
+                    <p>
+                        Recommendations consider multiple factors instead of skill score alone.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="matching-factors">
+
+                <div class="factor">
+                    <div class="factor-icon">✓</div>
+
+                    <div>
+                        <strong>Verified Skills</strong>
+                        <p>Assessment-based skill information.</p>
+                    </div>
+                </div>
+
+
+                <div class="factor">
+                    <div class="factor-icon">◆</div>
+
+                    <div>
+                        <strong>Domain Interest</strong>
+                        <p>Matches your preferred technical domains.</p>
+                    </div>
+                </div>
+
+
+                <div class="factor">
+                    <div class="factor-icon">⌖</div>
+
+                    <div>
+                        <strong>Location</strong>
+                        <p>Considers district, state and region.</p>
+                    </div>
+                </div>
+
+
+                <div class="factor">
+                    <div class="factor-icon">↗</div>
+
+                    <div>
+                        <strong>Growth Profile</strong>
+                        <p>Considers consistency and improvement.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INFO -->
+        <section class="info-banner">
+
+            <div class="info-image">
+                <img
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=700&q=85"
+                    alt="Team discussion"
+                >
+            </div>
+
+            <div class="info-content">
+
+                <span>FAIR TEAM FORMATION</span>
+
+                <h2>Recommendations are not based only on the highest score.</h2>
+
+                <p>
+                    SYNC AI considers compatibility, interests, location,
+                    team vacancies and growth patterns to help create
+                    balanced teams.
+                </p>
+
+                <button id="matchingBtn">
+                    Explore Team Matching
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="../js/api.js"></script>
+<script src="../js/ai-recommendations.js"></script>
+<script src="../js/sync-3d-bg.js"></script>
+
+</body>
+</html>

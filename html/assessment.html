@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skill Assessment | SYNC AI</title>
+
+    <link rel="stylesheet" href="../css/assessment.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+
+<body>
+
+    <div class="assessment-wrapper">
+
+        <!-- HEADER -->
+        <header class="assessment-header">
+
+            <div class="brand">
+                <div class="brand-icon">S</div>
+                <span>SYNC <strong>AI</strong></span>
+            </div>
+
+            <div class="assessment-title">
+                <span>INITIAL SKILL ASSESSMENT</span>
+                <h1>Student Assessment</h1>
+            </div>
+
+            <div class="timer-container">
+
+                <span class="timer-label">TIME REMAINING</span>
+
+                <div class="timer" id="timer">
+                    30:00
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PROGRESS -->
+        <section class="progress-section">
+
+            <div class="progress-top">
+
+                <span>
+                    Question <strong id="currentQuestion">1</strong>
+                    of <strong id="totalQuestions">20</strong>
+                </span>
+
+                <span id="categoryName">
+                    Coding
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+                <div
+                    class="progress-fill"
+                    id="progressFill">
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="assessment-main">
+
+            <!-- QUESTION CARD -->
+            <section class="question-card">
+
+                <div class="question-number" id="questionNumber">
+                    QUESTION 01
+                </div>
+
+                <h2 id="questionText">
+                    Loading question...
+                </h2>
+
+
+                <!-- OPTIONS -->
+                <div
+                    class="options"
+                    id="optionsContainer">
+                </div>
+
+
+                <!-- EXPLANATION -->
+                <div class="explanation-box">
+
+                    <div class="explanation-icon">
+                        i
+                    </div>
+
+                    <div>
+                        <strong>Think before selecting</strong>
+
+                        <p>
+                            Choose the answer that best represents
+                            your understanding.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- NAVIGATION -->
+                <div class="navigation">
+
+                    <button
+                        class="previous-btn"
+                        id="previousBtn">
+                        ← Previous
+                    </button>
+
+                    <span id="answeredCount">
+                        0 / 20 answered
+                    </span>
+
+                    <button
+                        class="next-btn"
+                        id="nextBtn">
+                        Next →
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- SIDE PANEL -->
+            <aside class="side-panel">
+
+                <div class="student-card">
+
+                    <div class="student-avatar" id="studentAvatar">
+                        S
+                    </div>
+
+                    <div>
+                        <span>ASSESSMENT FOR</span>
+                        <strong id="studentName">
+                            Student
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORY -->
+                <div class="category-card">
+
+                    <h3>Assessment Areas</h3>
+
+                    <div class="category-item active">
+                        <span>01</span>
+                        <div>
+                            <strong>Coding</strong>
+                            <small>Programming fundamentals</small>
+                        </div>
+                    </div>
+
+                    <div class="category-item">
+                        <span>02</span>
+                        <div>
+                            <strong>Problem Solving</strong>
+                            <small>Technical thinking</small>
+                        </div>
+                    </div>
+
+                    <div class="category-item">
+                        <span>03</span>
+                        <div>
+                            <strong>Logical Reasoning</strong>
+                            <small>Analytical ability</small>
+                        </div>
+                    </div>
+
+                    <div class="category-item">
+                        <span>04</span>
+                        <div>
+                            <strong>Communication</strong>
+                            <small>Clarity of explanation</small>
+                        </div>
+                    </div>
+
+                    <div class="category-item">
+                        <span>05</span>
+                        <div>
+                            <strong>Teamwork</strong>
+                            <small>Collaboration mindset</small>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!-- SECURITY -->
+                <div class="security-card">
+
+                    <div class="security-icon">
+                        ✓
+                    </div>
+
+                    <div>
+                        <strong>Assessment Security</strong>
+
+                        <p>
+                            Stay on this page until your
+                            assessment is completed.
+                        </p>
+                    </div>
+
+                </div>
+
+            </aside>
+
+        </main>
+
+    </div>
+
+
+    <!-- WARNING MODAL -->
+    <div
+        class="warning-overlay"
+        id="warningOverlay">
+
+        <div class="warning-modal">
+
+            <div class="warning-symbol">
+                !
+            </div>
+
+            <h2>Assessment Warning</h2>
+
+            <p id="warningMessage">
+                Please stay on the assessment page.
+            </p>
+
+            <button id="warningClose">
+                Continue Assessment
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- SUBMIT MODAL -->
+    <div
+        class="submit-overlay"
+        id="submitOverlay">
+
+        <div class="submit-modal">
+
+            <div class="submit-icon">
+                ✓
+            </div>
+
+            <h2>Submit Assessment?</h2>
+
+            <p>
+                Make sure you have answered all the questions
+                before submitting.
+            </p>
+
+            <div class="submit-summary">
+
+                <div>
+                    <span>Answered</span>
+                    <strong id="submitAnswered">0 / 20</strong>
+                </div>
+
+                <div>
+                    <span>Remaining</span>
+                    <strong id="submitRemaining">20</strong>
+                </div>
+
+            </div>
+
+            <div class="submit-actions">
+
+                <button
+                    class="cancel-submit"
+                    id="cancelSubmit">
+                    Continue
+                </button>
+
+                <button
+                    class="confirm-submit"
+                    id="confirmSubmit">
+                    Submit Assessment
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/api.js"></script>
+    <script src="../js/assessment.js"></script>
+    <script src="../js/sync-3d-bg.js"></script>
+
+</body>
+</html>

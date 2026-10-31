@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find Hackathons | SYNC AI</title>
+
+    <link rel="stylesheet" href="../css/find-hackathons.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+
+<body>
+
+<div class="page-layout">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            <div class="logo-circle">S</div>
+            <div class="logo-text">SYNC AI</div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                <span class="nav-icon">⌂</span>
+                <span class="nav-text">Dashboard</span>
+            </a>
+
+            <a href="find-hackathons.html" class="active">
+                <span class="nav-icon">◈</span>
+                <span class="nav-text">Find Hackathons</span>
+            </a>
+
+            <a href="team-matching.html">
+                <span class="nav-icon">◎</span>
+                <span class="nav-text">Team Matching</span>
+            </a>
+
+            <a href="my-skills.html">
+                <span class="nav-icon">▣</span>
+                <span class="nav-text">My Skills</span>
+            </a>
+
+            <a href="growth-progress.html">
+                <span class="nav-icon">↗</span>
+                <span class="nav-text">Growth &amp; Progress</span>
+            </a>
+
+            <a href="chat.html">
+                <span class="nav-icon">▱</span>
+                <span class="nav-text">Chat</span>
+            </a>
+
+            <a href="my-teams.html">
+                <span class="nav-icon">♧</span>
+                <span class="nav-text">My Teams</span>
+            </a>
+
+            <a href="profile.html">
+                <span class="nav-icon">○</span>
+                <span class="nav-text">Profile</span>
+            </a>
+
+            <a href="ai-recommendations.html">
+                <span class="nav-icon">✦</span>
+                <span class="nav-text">AI Recommendations</span>
+            </a>
+
+            <a href="notifications.html">
+                <span class="nav-icon">♢</span>
+                <span class="nav-text">Notifications</span>
+            </a>
+
+            <a href="settings.html">
+                <span class="nav-icon">⚙</span>
+                <span class="nav-text">Settings</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div>
+                <h1>Find Hackathons</h1>
+
+                <p>
+                    Discover hackathons that match your skills,
+                    interests and location.
+                </p>
+            </div>
+
+            <div class="topbar-right">
+
+                <button
+                    class="notification-btn"
+                    id="notificationBtn"
+                    title="Notifications">
+                    ♢
+                </button>
+
+                <div
+                    class="user-mini"
+                    id="profileBtn">
+
+                    <div
+                        class="user-mini-avatar"
+                        id="topAvatar">
+                        K
+                    </div>
+
+                    <div class="user-mini-info">
+
+                        <span
+                            class="user-mini-name"
+                            id="topUserName">
+                            Student
+                        </span>
+
+                        <span class="user-mini-role">
+                            Student
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="discover-hero">
+
+            <div class="hero-content">
+
+                <span class="hero-label">
+                    HACKATHON HUB
+                </span>
+
+                <h2>
+                    Discover Your Next
+                    <span>Challenge</span>
+                </h2>
+
+                <p>
+                    Explore college, national and online hackathons.
+                    Find opportunities that fit your domain and
+                    interests.
+                </p>
+
+            </div>
+
+            <img
+                src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=85"
+                alt="Technology and coding"
+                class="hero-image">
+
+        </section>
+
+
+        <!-- ================= SEARCH ================= -->
+
+        <section class="search-section">
+
+            <div class="search-box">
+
+                <span class="search-icon">⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search hackathons by name, domain or organizer...">
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FILTERS ================= -->
+
+        <section class="filter-card">
+
+            <div class="filter-header">
+
+                <div>
+                    <h3>Explore Hackathons</h3>
+
+                    <p>
+                        Filter opportunities based on your preferences.
+                    </p>
+                </div>
+
+                <button
+                    id="clearFilters"
+                    class="clear-btn">
+                    Clear Filters
+                </button>
+
+            </div>
+
+
+            <div class="filters-grid">
+
+                <div class="filter-group">
+
+                    <label for="domainFilter">
+                        Domain
+                    </label>
+
+                    <select id="domainFilter">
+
+                        <option value="all">
+                            All Domains
+                        </option>
+
+                        <option value="Web Development">
+                            Web Development
+                        </option>
+
+                        <option value="App Development">
+                            App Development
+                        </option>
+
+                        <option value="AI / Machine Learning">
+                            AI / Machine Learning
+                        </option>
+
+                        <option value="Data Science">
+                            Data Science
+                        </option>
+
+                        <option value="Cyber Security">
+                            Cyber Security
+                        </option>
+
+                        <option value="Cloud / DevOps">
+                            Cloud / DevOps
+                        </option>
+
+                        <option value="UI/UX">
+                            UI/UX
+                        </option>
+
+                        <option value="Blockchain / Web3">
+                            Blockchain / Web3
+                        </option>
+
+                        <option value="IoT / Embedded">
+                            IoT / Embedded
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="modeFilter">
+                        Mode
+                    </label>
+
+                    <select id="modeFilter">
+
+                        <option value="all">
+                            All Modes
+                        </option>
+
+                        <option value="Online">
+                            Online
+                        </option>
+
+                        <option value="Offline">
+                            Offline
+                        </option>
+
+                        <option value="Hybrid">
+                            Hybrid
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="locationFilter">
+                        Location
+                    </label>
+
+                    <select id="locationFilter">
+
+                        <option value="all">
+                            All Locations
+                        </option>
+
+                        <option value="India">
+                            India
+                        </option>
+
+                        <option value="Tamil Nadu">
+                            Tamil Nadu
+                        </option>
+
+                        <option value="Coimbatore">
+                            Coimbatore
+                        </option>
+
+                        <option value="Chennai">
+                            Chennai
+                        </option>
+
+                        <option value="Bengaluru">
+                            Bengaluru
+                        </option>
+
+                        <option value="Online">
+                            Online
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="deadlineFilter">
+                        Deadline
+                    </label>
+
+                    <select id="deadlineFilter">
+
+                        <option value="all">
+                            All Deadlines
+                        </option>
+
+                        <option value="week">
+                            Within 7 Days
+                        </option>
+
+                        <option value="month">
+                            Within 30 Days
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RESULTS HEADER ================= -->
+
+        <div class="results-header">
+
+            <div>
+
+                <h3>
+                    Available Hackathons
+                </h3>
+
+                <p id="resultCount">
+                    8 hackathons found
+                </p>
+
+            </div>
+
+            <select
+                id="sortFilter"
+                class="sort-select">
+
+                <option value="recommended">
+                    Recommended
+                </option>
+
+                <option value="deadline">
+                    Deadline
+                </option>
+
+                <option value="prize">
+                    Prize
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ================= HACKATHON GRID ================= -->
+
+        <section
+            class="hackathon-grid"
+            id="hackathonGrid">
+
+
+            <!-- Card 1 -->
+
+            <article
+                class="hackathon-card"
+                data-domain="AI / Machine Learning"
+                data-mode="Online"
+                data-location="Online"
+                data-deadline="7"
+                data-prize="100000">
+
+                <div class="card-image-wrap">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1555255707-c07966088b7b?auto=format&fit=crop&w=800&q=85"
+                        alt="Artificial intelligence">
+
+                    <span class="mode-badge online">
+                        Online
+                    </span>
+
+                    <button
+                        class="save-btn"
+                        data-id="ai-future">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="hackathon-content">
+
+                    <span class="domain-tag">
+                        AI / ML
+                    </span>
+
+                    <h3>
+                        AI Future Builders
+                    </h3>
+
+                    <p class="organizer">
+                        Student Innovation Network
+                    </p>
+
+                    <div class="hackathon-info">
+
+                        <span>◷ 7 Days Left</span>
+                        <span>₹1,00,000</span>
+
+                    </div>
+
+                    <div class="card-bottom">
+
+                        <span>
+                            Online
+                        </span>
+
+                        <button
+                            class="details-btn"
+                            data-id="ai-future">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card 2 -->
+
+            <article
+                class="hackathon-card"
+                data-domain="Web Development"
+                data-mode="Offline"
+                data-location="Coimbatore"
+                data-deadline="12"
+                data-prize="75000">
+
+                <div class="card-image-wrap">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=85"
+                        alt="Students collaborating">
+
+                    <span class="mode-badge offline">
+                        Offline
+                    </span>
+
+                    <button
+                        class="save-btn"
+                        data-id="web-build">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="hackathon-content">
+
+                    <span class="domain-tag">
+                        Web Development
+                    </span>
+
+                    <h3>
+                        Web Build Challenge
+                    </h3>
+
+                    <p class="organizer">
+                        Campus Tech Community
+                    </p>
+
+                    <div class="hackathon-info">
+
+                        <span>◷ 12 Days Left</span>
+                        <span>₹75,000</span>
+
+                    </div>
+
+                    <div class="card-bottom">
+
+                        <span>
+                            Coimbatore
+                        </span>
+
+                        <button
+                            class="details-btn"
+                            data-id="web-build">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card 3 -->
+
+            <article
+                class="hackathon-card"
+                data-domain="Cyber Security"
+                data-mode="Hybrid"
+                data-location="Chennai"
+                data-deadline="18"
+                data-prize="150000">
+
+                <div class="card-image-wrap">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=85"
+                        alt="Cyber security">
+
+                    <span class="mode-badge hybrid">
+                        Hybrid
+                    </span>
+
+                    <button
+                        class="save-btn"
+                        data-id="cyber-shield">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="hackathon-content">
+
+                    <span class="domain-tag">
+                        Cyber Security
+                    </span>
+
+                    <h3>
+                        Cyber Shield Hackathon
+                    </h3>
+
+                    <p class="organizer">
+                        SecureTech Community
+                    </p>
+
+                    <div class="hackathon-info">
+
+                        <span>◷ 18 Days Left</span>
+                        <span>₹1,50,000</span>
+
+                    </div>
+
+                    <div class="card-bottom">
+
+                        <span>
+                            Chennai
+                        </span>
+
+                        <button
+                            class="details-btn"
+                            data-id="cyber-shield">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card 4 -->
+
+            <article
+                class="hackathon-card"
+                data-domain="App Development"
+                data-mode="Offline"
+                data-location="Bengaluru"
+                data-deadline="21"
+                data-prize="200000">
+
+                <div class="card-image-wrap">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&w=800&q=85"
+                        alt="Mobile application development">
+
+                    <span class="mode-badge offline">
+                        Offline
+                    </span>
+
+                    <button
+                        class="save-btn"
+                        data-id="app-innovate">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="hackathon-content">
+
+                    <span class="domain-tag">
+                        App Development
+                    </span>
+
+                    <h3>
+                        App Innovate 2026
+                    </h3>
+
+                    <p class="organizer">
+                        Developer Community India
+                    </p>
+
+                    <div class="hackathon-info">
+
+                        <span>◷ 21 Days Left</span>
+                        <span>₹2,00,000</span>
+
+                    </div>
+
+                    <div class="card-bottom">
+
+                        <span>
+                            Bengaluru
+                        </span>
+
+                        <button
+                            class="details-btn"
+                            data-id="app-innovate">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card 5 -->
+
+            <article
+                class="hackathon-card"
+                data-domain="Data Science"
+                data-mode="Online"
+                data-location="Online"
+                data-deadline="25"
+                data-prize="125000">
+
+                <div class="card-image-wrap">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=85"
+                        alt="Data analytics">
+
+                    <span class="mode-badge online">
+                        Online
+                    </span>
+
+                    <button
+                        class="save-btn"
+                        data-id="data-minds">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="hackathon-content">
+
+                    <span class="domain-tag">
+                        Data Science
+                    </span>
+
+                    <h3>
+                        Data Minds Challenge
+                    </h3>
+
+                    <p class="organizer">
+                        Open Data Community
+                    </p>
+
+                    <div class="hackathon-info">
+
+                        <span>◷ 25 Days Left</span>
+                        <span>₹1,25,000</span>
+
+                    </div>
+
+                    <div class="card-bottom">
+
+                        <span>
+                            Online
+                        </span>
+
+                        <button
+                            class="details-btn"
+                            data-id="data-minds">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card 6 -->
+
+            <article
+                class="hackathon-card"
+                data-domain="UI/UX"
+                data-mode="Offline"
+                data-location="Tamil Nadu"
+                data-deadline="16"
+                data-prize="60000">
+
+                <div class="card-image-wrap">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=800&q=85"
+                        alt="UI UX design">
+
+                    <span class="mode-badge offline">
+                        Offline
+                    </span>
+
+                    <button
+                        class="save-btn"
+                        data-id="design-sprint">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="hackathon-content">
+
+                    <span class="domain-tag">
+                        UI/UX
+                    </span>
+
+                    <h3>
+                        Design Sprint Challenge
+                    </h3>
+
+                    <p class="organizer">
+                        Design & Innovation Club
+                    </p>
+
+                    <div class="hackathon-info">
+
+                        <span>◷ 16 Days Left</span>
+                        <span>₹60,000</span>
+
+                    </div>
+
+                    <div class="card-bottom">
+
+                        <span>
+                            Tamil Nadu
+                        </span>
+
+                        <button
+                            class="details-btn"
+                            data-id="design-sprint">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card 7 -->
+
+            <article
+                class="hackathon-card"
+                data-domain="Cloud / DevOps"
+                data-mode="Hybrid"
+                data-location="India"
+                data-deadline="30"
+                data-prize="175000">
+
+                <div class="card-image-wrap">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=85"
+                        alt="Cloud computing">
+
+                    <span class="mode-badge hybrid">
+                        Hybrid
+                    </span>
+
+                    <button
+                        class="save-btn"
+                        data-id="cloud-build">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="hackathon-content">
+
+                    <span class="domain-tag">
+                        Cloud / DevOps
+                    </span>
+
+                    <h3>
+                        Cloud Build India
+                    </h3>
+
+                    <p class="organizer">
+                        Cloud Developer Network
+                    </p>
+
+                    <div class="hackathon-info">
+
+                        <span>◷ 30 Days Left</span>
+                        <span>₹1,75,000</span>
+
+                    </div>
+
+                    <div class="card-bottom">
+
+                        <span>
+                            India
+                        </span>
+
+                        <button
+                            class="details-btn"
+                            data-id="cloud-build">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- Card 8 -->
+
+            <article
+                class="hackathon-card"
+                data-domain="Blockchain / Web3"
+                data-mode="Online"
+                data-location="Online"
+                data-deadline="35"
+                data-prize="250000">
+
+                <div class="card-image-wrap">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=800&q=85"
+                        alt="Blockchain technology">
+
+                    <span class="mode-badge online">
+                        Online
+                    </span>
+
+                    <button
+                        class="save-btn"
+                        data-id="web3-builders">
+                        ♡
+                    </button>
+
+                </div>
+
+                <div class="hackathon-content">
+
+                    <span class="domain-tag">
+                        Blockchain / Web3
+                    </span>
+
+                    <h3>
+                        Web3 Builders Hackathon
+                    </h3>
+
+                    <p class="organizer">
+                        Web3 Student Community
+                    </p>
+
+                    <div class="hackathon-info">
+
+                        <span>◷ 35 Days Left</span>
+                        <span>₹2,50,000</span>
+
+                    </div>
+
+                    <div class="card-bottom">
+
+                        <span>
+                            Online
+                        </span>
+
+                        <button
+                            class="details-btn"
+                            data-id="web3-builders">
+                            View Details
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- NO RESULTS -->
+
+        <div
+            class="no-results"
+            id="noResults"
+            style="display: none;">
+
+            <div class="no-results-icon">
+                ⌕
+            </div>
+
+            <h3>
+                No hackathons found
+            </h3>
+
+            <p>
+                Try changing your search or filters.
+            </p>
+
+        </div>
+
+
+        <!-- ================= FOOTER ================= -->
+
+        <footer class="page-footer">
+
+            © <span id="footerYear"></span>
+            SYNC AI. All rights reserved.
+
+        </footer>
+
+    </main>
+
+</div>
+
+
+<!-- ================= DETAILS MODAL ================= -->
+
+<div
+    class="modal-overlay"
+    id="detailsModal">
+
+    <div class="details-modal">
+
+        <button
+            class="modal-close"
+            id="modalClose">
+            ×
+        </button>
+
+        <div class="modal-icon">
+            ✦
+        </div>
+
+        <h2 id="modalTitle">
+            Hackathon
+        </h2>
+
+        <p
+            class="modal-organizer"
+            id="modalOrganizer">
+            Organizer
+        </p>
+
+        <div class="modal-details">
+
+            <div>
+                <span>Domain</span>
+                <strong id="modalDomain">
+                    -
+                </strong>
+            </div>
+
+            <div>
+                <span>Mode</span>
+                <strong id="modalMode">
+                    -
+                </strong>
+            </div>
+
+            <div>
+                <span>Location</span>
+                <strong id="modalLocation">
+                    -
+                </strong>
+            </div>
+
+            <div>
+                <span>Prize</span>
+                <strong id="modalPrize">
+                    -
+                </strong>
+            </div>
+
+            <div>
+                <span>Deadline</span>
+                <strong id="modalDeadline">
+                    -
+                </strong>
+            </div>
+
+        </div>
+
+        <p class="modal-description">
+            Explore this hackathon, form your team through
+            SYNC AI and participate with compatible teammates.
+        </p>
+
+        <button
+            class="modal-action"
+            id="modalAction">
+            Save Hackathon
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="../js/api.js"></script>
+<script src="../js/find-hackathons.js"></script>
+<script src="../js/sync-3d-bg.js"></script>
+
+</body>
+</html>

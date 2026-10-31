@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Assessment Result | SYNC AI</title>
+
+    <link rel="stylesheet" href="../css/assessment-result.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+
+<body>
+
+    <main class="result-page">
+
+        <!-- LEFT SECTION -->
+        <section class="result-visual">
+
+            <div class="visual-content">
+
+                <div class="brand">
+                    <div class="brand-icon">S</div>
+                    <span>SYNC <strong>AI</strong></span>
+                </div>
+
+                <div class="visual-heading">
+
+                    <span class="label">ASSESSMENT COMPLETED</span>
+
+                    <h1>
+                        Your skills.<br>
+                        <span>Your starting point.</span>
+                    </h1>
+
+                    <p>
+                        Your assessment has been evaluated across multiple
+                        areas. This score will help SYNC AI understand your
+                        current strengths and recommend compatible teammates.
+                    </p>
+
+                </div>
+
+                <div class="image-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=85"
+                        alt="Students working together"
+                    >
+
+                    <div class="image-overlay"></div>
+
+                    <div class="image-caption">
+                        <span class="caption-dot"></span>
+
+                        <div>
+                            <strong>Every learner has a starting point.</strong>
+                            <p>Keep learning. Keep growing.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SECTION -->
+        <section class="result-content">
+
+            <div class="result-card">
+
+                <div class="top-row">
+
+                    <span class="result-label">
+                        VERIFIED SKILL PROFILE
+                    </span>
+
+                    <span class="completed-badge">
+                        ✓ COMPLETED
+                    </span>
+
+                </div>
+
+
+                <!-- STUDENT -->
+                <div class="student-section">
+
+                    <div
+                        class="student-avatar"
+                        id="studentAvatar">
+                        S
+                    </div>
+
+                    <div>
+
+                        <span class="student-label">
+                            ASSESSMENT COMPLETED BY
+                        </span>
+
+                        <h2 id="studentName">
+                            Student
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SCORE -->
+                <div class="score-section">
+
+                    <div class="score-circle">
+
+                        <div class="circle-inner">
+
+                            <strong id="overallScore">
+                                0
+                            </strong>
+
+                            <span>/100</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="score-info">
+
+                        <span class="score-title">
+                            VERIFIED SKILL SCORE
+                        </span>
+
+                        <h3 id="scoreMessage">
+                            Calculating your result...
+                        </h3>
+
+                        <p>
+                            This score represents your performance
+                            in the initial assessment.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CATEGORY SCORES -->
+                <div class="category-section">
+
+                    <div class="section-heading">
+
+                        <h3>Skill Breakdown</h3>
+
+                        <p>
+                            Your performance across assessment areas
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-bars">
+
+                        <!-- CODING -->
+                        <div class="skill-row">
+
+                            <div class="skill-top">
+
+                                <span>Coding</span>
+
+                                <strong id="codingScore">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="bar">
+                                <div
+                                    class="bar-fill"
+                                    id="codingBar">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- PROBLEM SOLVING -->
+                        <div class="skill-row">
+
+                            <div class="skill-top">
+
+                                <span>Problem Solving</span>
+
+                                <strong id="problemScore">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="bar">
+                                <div
+                                    class="bar-fill"
+                                    id="problemBar">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- LOGICAL -->
+                        <div class="skill-row">
+
+                            <div class="skill-top">
+
+                                <span>Logical Reasoning</span>
+
+                                <strong id="logicalScore">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="bar">
+                                <div
+                                    class="bar-fill"
+                                    id="logicalBar">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- COMMUNICATION -->
+                        <div class="skill-row">
+
+                            <div class="skill-top">
+
+                                <span>Communication</span>
+
+                                <strong id="communicationScore">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="bar">
+                                <div
+                                    class="bar-fill"
+                                    id="communicationBar">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <!-- TEAMWORK -->
+                        <div class="skill-row">
+
+                            <div class="skill-top">
+
+                                <span>Teamwork</span>
+
+                                <strong id="teamworkScore">
+                                    0%
+                                </strong>
+
+                            </div>
+
+                            <div class="bar">
+                                <div
+                                    class="bar-fill"
+                                    id="teamworkBar">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INFO -->
+                <div class="result-info">
+
+                    <div class="info-icon">i</div>
+
+                    <div>
+
+                        <strong>
+                            What happens next?
+                        </strong>
+
+                        <p>
+                            Your verified skill score is private.
+                            You can now complete your profile and
+                            choose your preferred domains before
+                            discovering compatible teams.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BUTTON -->
+                <button
+                    id="continueBtn"
+                    class="continue-btn">
+
+                    <span>Continue to Profile Setup</span>
+
+                    <span class="arrow">→</span>
+
+                </button>
+
+
+                <p class="footer-note">
+                    Your score can grow through future assessments,
+                    learning activity and improvement.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/api.js"></script>
+    <script src="../js/assessment-result.js"></script>
+    <script src="../js/sync-3d-bg.js"></script>
+
+</body>
+</html>

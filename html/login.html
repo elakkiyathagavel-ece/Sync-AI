@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SYNC AI - Login</title>
+
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/sync-3d-bg.css">
+</head>
+
+
+<body>
+
+    <main class="login-page">
+
+        <!-- LEFT SIDE -->
+        <section class="visual-section">
+
+            <!-- Logo -->
+            <div class="brand">
+                <div class="brand-mark">
+                    S
+                </div>
+
+                <div class="brand-name">
+                    Sync <span>AI</span>
+                </div>
+            </div>
+
+
+            <!-- Main Content -->
+            <div class="visual-content">
+
+                <div class="small-label">
+                    AI-POWERED HACKATHON PLATFORM
+                </div>
+
+                <h1>
+                    Find the right team.
+                    <span>Build something great.</span>
+                </h1>
+
+                <p>
+                    Connect with students who match your
+                    skills, interests and goals.
+                </p>
+
+
+                <!-- Real Image -->
+                <div class="image-card">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=85"
+                        alt="Students collaborating on a project"
+                    >
+
+                    <div class="image-overlay">
+
+                        <div class="overlay-icon">
+                            AI
+                        </div>
+
+                        <div>
+                            <strong>Smart Team Matching</strong>
+                            <p>
+                                Skills • Interests • Compatibility
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bottom -->
+            <div class="visual-footer">
+                Better Skills &nbsp;•&nbsp; Better Teams &nbsp;•&nbsp; Bigger Dreams
+            </div>
+
+        </section>
+
+
+
+        <!-- RIGHT SIDE -->
+        <section class="form-section">
+
+            <div class="login-card">
+
+                <!-- Mobile Logo -->
+                <div class="mobile-brand">
+
+                    <div class="brand-mark">
+                        S
+                    </div>
+
+                    <div class="brand-name">
+                        Sync <span>AI</span>
+                    </div>
+
+                </div>
+
+
+                <div class="form-heading">
+
+                    <p class="welcome-label">
+                        WELCOME BACK
+                    </p>
+
+                    <h2>
+                        Sign in to SYNC AI
+                    </h2>
+
+                    <p>
+                        Continue your journey to find the right
+                        hackathon team.
+                    </p>
+
+                </div>
+
+
+
+                <!-- LOGIN FORM -->
+                <form id="loginForm">
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            College Email
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                @
+                            </span>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your college email"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Password -->
+                    <div class="form-group">
+
+                        <div class="label-row">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <a href="#" id="forgotPassword">
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+
+                        <div class="input-wrapper">
+
+                            <span class="input-icon">
+                                •••
+                            </span>
+
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="togglePassword"
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Remember -->
+                    <div class="remember-row">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe"
+                            >
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- Login Button -->
+                    <button
+                        type="submit"
+                        class="login-button"
+                    >
+                        <span>Sign In</span>
+                        <span class="button-arrow">→</span>
+                    </button>
+
+                </form>
+
+
+
+                <!-- Divider -->
+                <div class="divider">
+
+                    <span></span>
+                    <p>OR</p>
+                    <span></span>
+
+                </div>
+
+
+
+                <!-- Create Account -->
+                <div class="signup-area">
+
+                    <p>
+                        New to SYNC AI?
+                    </p>
+
+                    <button
+                        type="button"
+                        id="createAccountBtn"
+                        class="signup-button"
+                    >
+                        Create Account
+                    </button>
+
+                </div>
+
+
+
+                <!-- Security -->
+                <div class="security-note">
+
+                    <div class="security-dot"></div>
+
+                    <p>
+                        Your college account and profile
+                        information are securely handled.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="../js/api.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/sync-3d-bg.js"></script>
+
+</body>
+
+</html>
